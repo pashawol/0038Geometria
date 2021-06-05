@@ -1,0 +1,47 @@
+mixin sCharacters(data)
+	// start sCharacters
+	+b.SECTION.sCharacters.section#sCharacters&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Характеристики профиля
+			.tabs.tabs--js
+				.tabs__caption 
+					.tabs__btn.active VEKA Softline
+					.tabs__btn VEKA WHS72
+				.tabs__wrap
+					mixin tab()
+						.tabs__content&attributes(attributes)
+							+e.inner
+								+e.head
+									.row
+										.col-md-auto
+											+pic("char.png",'',0)
+										.col
+											h3 VEKA Softline
+											p Все профили VEKA производятся в соответствии с требованиями высшего класса качества немецкого стандарта DIN EN 12608 — класса А. Только из таких профилей можно сделать окна и двери, которые будут надёжно работать многие десятилетия, радуя Вас своим великолепным внешним видом и удобством использования. 100% качества профиля — чтобы Ваши окна дарили Вам радость.
+											.row.row--sm.text-start
+												.col-auto
+													.strong.text-primary Количество камер:
+													h3 5
+													
+												.col-auto
+													.strong.text-primary Класс энергоэффективности:
+													h3 А+
+								+e.body 
+									.row
+										mixin item(i,t,p)
+											+e.col.col-xl-3.col-md-6 
+												+e.item
+													+e.icon-wrap 
+														img(src=`img/svg/char-i-${i}.svg` loading="lazy", alt="")
+													p: strong= t
+													p!= p
+										+item(`1`,`Энергоэффективность`,`Стабильная многокамерная система с&nbsp;превосходными изолирующими характеристиками.`)
+										+item(`2`,`Защита от шума`,`Высокая шумоизоляция обеспечивает тишуну и&nbsp;спокойствие Вашего дома.`)
+										+item(`3`,`Дизайн и долговечность`,`Высококачественный пластик, устойчивый к воздействиям внешней среды, ровная гладкая поверхность в любом цвете и дизайне.`)
+										+item(`4`,`Прочность и надежность`,`Использование специальных армирующих усилителей обеспечивает высокую стабильность конструкции.`)
+									.text-center
+										+e.btn(href="#") Подробнее
+					+tab.active
+
+	// end sCharacters

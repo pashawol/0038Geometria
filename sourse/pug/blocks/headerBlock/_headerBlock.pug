@@ -1,0 +1,12 @@
+mixin headerBlock()
+	// start headerBlock
+	+b.headerBlock#headerBlock&attributes(attributes)
+		+slider()
+			+e.slide.swiper-slide.bg-wrap
+				//- +pic("head-img.jpg",'bg').picture-bg
+				img.swiper-lazy(src="#" data-src="img/@2x/head-img.jpg", alt="")
+				+e.block.section
+					p Индивидуальная скидка!
+					+e.title Летнее предложение для загородных домов и дач
+					+e.btn(href="#") Подробнее 
+	// end headerBlock

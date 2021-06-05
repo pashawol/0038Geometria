@@ -1,0 +1,25 @@
+mixin topLine()
+	// start topLine
+	+b.topLine.section&attributes(attributes)
+		.container 
+			.row
+				+e.logo-wrap.col-auto
+					a(href="/") 
+						img(src="img/svg/logo.svg", alt="")
+				.col
+					+e.small Нижний Новгород, ул. Окская гавань, д. 3
+					+e.time Пн-Пт: 9:00 - 18:00, Сб: 9:00 - 14:00, Вс: выходной
+				.col-auto
+					+e.soc-link(href="#"): img(src="img/svg/viber.svg", alt="")
+					+e.soc-link(href="#"): img(src="img/svg/whatsapp.svg", alt="")
+					+e.soc-link(href="#"): img(src="img/svg/telegram.svg", alt="")
+				.col-auto.text-end
+					div: +e.tel(href="tel:+7(920)016-29-99") +7 (920) 016-29-99
+					+e.call(href="#") Заказать звонок
+				.col-auto
+					+e.btn(href="#") 
+						+icon('calculator')
+						| Калькулятор цен
+				.col-auto.d-none
+
+	// end topLine

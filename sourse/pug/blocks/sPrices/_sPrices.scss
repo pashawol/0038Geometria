@@ -1,0 +1,182 @@
+// start .sPrices
+.sPrices {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		h2{
+			&::after{
+				display: none;
+			}
+		}
+
+		&__item{
+			padding: rem(40);
+			min-height: calc(100% - 10px);
+			margin-bottom: 10px;
+			display: flex;
+			@include media-breakpoint-between(md, xl) {
+				flex-direction: row;
+			}
+				flex-direction: column;
+			background: #FFFFFF;
+			border: 1px solid #E5E5E5;
+			box-sizing: border-box;
+			border-radius: 15px; 
+		}
+		picture{
+			display: block; 
+				text-align: center;
+				// margin-right: 0;
+				padding-right: 0;
+				@include media-breakpoint-between(md, xl) {
+				padding-right: rem(30);
+				text-align: left;
+			}
+			margin-bottom: rem(40);
+		}
+		&__title{
+		 
+			text-align: center;
+				@include media-breakpoint-between(md, xl){
+					text-align: left;
+				}
+			@include rfs(20px);
+			margin-bottom: rem(35);
+			font-weight: bold;
+		}
+		&__body{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+			@include media-breakpoint-between(md, xl){
+				flex-direction: row;
+			}
+		}
+
+		&__head{
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			
+			width: 100%;
+				@include media-breakpoint-between(md, xl){
+
+					flex: 0 0 auto;
+					width: 50%;
+				}
+		}
+		strong{
+			@include media-breakpoint-up(xxl) {
+				font-size: rem(28);
+			}
+			@include rfs(20px);
+		}
+ 
+		&__btn{
+			@extend .btn;
+			&.btn-outline-primary{
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: rem(35);
+				box-shadow: 0px 10px 15px rgba(240, 129, 31, 0.15);
+				@include media-breakpoint-up(xxl) {
+
+					width: rem(220);
+				}
+				width: rem(200);
+			}
+			&.btn-primary{
+				margin-top: rem(50);
+				padding-left: rem(26);
+				padding-right: rem(26);
+				.icon{
+					font-size: rem(30);
+					margin-right: rem(10);
+				}
+			}
+		}
+		.custom-input{
+			// display: flex;
+			cursor: pointer;
+			align-items: center;
+				font-weight: bold;
+				@include media-breakpoint-down(md) {
+					margin-left: auto;
+					margin-right: auto;
+					max-width: rem(260);
+					width: 100%;
+				}
+				@include media-breakpoint-up(xxl) {
+					@include rfs(20px);
+				}
+				text-align: left;
+				margin-bottom: rem(5);
+
+				input {
+					position: relative;
+					top: em(4);
+					margin-right: rem(10);
+				}
+
+				span {
+					color: #858F98;
+
+				}
+			&__tooltip {
+				font-weight: normal;
+				position: relative;
+				background: #E5E5E5;
+				border-radius: 50%;
+				width: rem(20);
+				height: rem(20);
+				// display: inline-block;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				font-size: rem(14);
+				margin-left: rem(5);
+				top: em(-2);
+				
+				&-text{
+					
+					font-size: 13px;
+					padding: rem(15);
+					color: $body-color;
+					position: absolute;
+					@include a-cent1(x);
+					bottom: 100%;
+					background: #E5E5E5;
+					width: rem(200); 
+					// border-radius: rem(15);
+					margin-bottom: rem(15);
+					opacity: 0;
+					visibility: hidden;
+					z-index: -1;
+					@include mt;
+					&::before{
+						content: '';
+						@include a-cent1(x);
+						top: 99%;
+						@include triangle(18px, #E5E5E5, down);
+					}
+				}
+
+			}
+			&__tooltip:hover   {
+			// display: none;
+			}
+			&__tooltip:hover .custom-input__tooltip-text {
+				opacity: 1;
+				visibility: visible;
+				z-index: 1;
+			}
+		}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sPrices

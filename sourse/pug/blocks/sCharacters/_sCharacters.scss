@@ -1,0 +1,115 @@
+// start .sCharacters
+.sCharacters {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+		@include media-breakpoint-up(xl) {
+			--sp: #{rem(60)};
+		}
+		--sp: #{rem(40)};
+	h2{
+		&::after{
+			display: none;
+		}
+	}
+	&__item{
+		text-align: center;
+	}
+	&__inner{
+			@include media-breakpoint-up(xl){
+
+				padding: var(--sp) calc(var(--sp) + #{rem(30)}) calc(var(--sp) - #{rem(5)});
+			}
+			padding: var(--sp) calc(var(--sp));
+		background: #FFFFFF;
+		border: 1px solid #E5E5E5; 
+		border-radius: 15px;
+		picture{
+			display: block;
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+				width: rem(240);
+				margin-right: var(--sp);
+			}
+			margin-bottom: 40px;
+			@include media-breakpoint-up(xxl){
+
+				width: rem(240 + 30);
+			}
+			@include media-breakpoint-up(xl){
+
+				width: rem(240 + 50);
+			}
+		}
+	}
+	h3{
+		font-weight: bold;
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(45);
+		}
+		margin-bottom: rem(30);
+	}
+	p{
+		line-height: 200%;
+	}
+	&__head{
+		border-bottom: 1px solid #E5E5E5; 
+		padding-bottom: calc(var(--sp) - 18px);
+		margin-bottom: calc(var(--sp) );
+			@include media-breakpoint-up(md){
+				text-align: left;
+			}
+			text-align: center;
+		p{
+			margin-bottom: rem(40);
+
+		}
+	}
+	&__icon-wrap{
+		width: rem(80);
+		height: rem(80);
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: rem(20);
+		background: #F1F2F0;
+		border-radius: 50%;
+		img{
+			flex: 0 0 auto;
+		}
+	}
+	.row--sm{
+		--bs-gutter-x: var(--sp);
+	}
+	&__col{
+		margin-bottom: rem(30);
+		text-align: center;
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-primary;
+		@include media-breakpoint-up(xl) {
+			width: rem(220);
+		}
+		width: rem(200);
+	}
+
+	&__item{
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(400);
+	}
+
+	.tabs{
+		&__caption{
+			margin-bottom: rem(60);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCharacters
