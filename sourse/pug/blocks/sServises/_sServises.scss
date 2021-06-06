@@ -102,7 +102,10 @@
 		}
 	}
 	&__col:nth-child(2) img{
-		margin-bottom: rem(-60);
+		@include media-breakpoint-down(lg) {
+
+			margin-bottom: rem(-60);
+		}
 	}
 	&__caption{
 		@include media-breakpoint-down(lg) {

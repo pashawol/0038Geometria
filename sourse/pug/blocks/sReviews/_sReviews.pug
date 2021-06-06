@@ -3,9 +3,26 @@ mixin sReviews(data)
 	+b.SECTION.sReviews.section#sReviews&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sReviews
-				
+				h2 Отзывы клиентов
 			+slider3()
-				+e.slide.swiper-slide
-					.text-center slide
+				mixin slide(i,t,p)
+					+e.slide.swiper-slide
+						+e.item
+							+e.head
+								img.avatar(src=`img/@2x/rew-${i}.jpg` loading="lazy", alt="")
+								+e.title= t
+								block
+							+e.body 
+								if p 
+									p= p
+								else
+									p Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение...
+								p: a.more(href="#") Показать еще 
+							+e.date 22 марта 2021 
+				+slide(`1`,`Ольга Иванова`,` dadasd`)
+					img.soc-i(src="img/svg/instagram.svg", alt="" loading="lazy")
+				+slide(`2`,`Сергей Петров`)
+					img.soc-i(src="img/svg/vk.svg", alt="" loading="lazy")
+				+slide(`3`,`Мария Фролова`)
+					img.soc-i(src="img/svg/vk.svg", alt="" loading="lazy")
 	// end sReviews

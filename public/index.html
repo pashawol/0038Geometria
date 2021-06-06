@@ -102,21 +102,27 @@
 					<div class="container">
 						<div class="headerBlock__slider slider-js swiper-container"> 
 							<div class="swiper-wrapper">
-								<div class="headerBlock__slide swiper-slide bg-wrap"><img class="swiper-lazy" src="#" data-src="img/@2x/head-img.jpg" alt=""/>
+								<div class="headerBlock__slide swiper-slide bg-wrap">
+									<div class="headerBlock__img-wrap"><img class="swiper-lazy" src="#" data-src="img/@2x/head-img.jpg" alt=""/>
+									</div>
 									<div class="headerBlock__block section">
 										<p>Индивидуальная скидка!</p>
 										<div class="headerBlock__title">Летнее предложение для загородных домов и дач
 										</div><a class="headerBlock__btn" href="#">Подробнее </a>
 									</div>
 								</div>
-								<div class="headerBlock__slide swiper-slide bg-wrap"><img class="swiper-lazy" src="#" data-src="img/@2x/head-img.jpg" alt=""/>
+								<div class="headerBlock__slide swiper-slide bg-wrap">
+									<div class="headerBlock__img-wrap"><img class="swiper-lazy" src="#" data-src="img/@2x/head-img.jpg" alt=""/>
+									</div>
 									<div class="headerBlock__block section">
 										<p>Индивидуальная скидка!</p>
 										<div class="headerBlock__title">Летнее предложение для загородных домов и дач
 										</div><a class="headerBlock__btn" href="#">Подробнее </a>
 									</div>
 								</div>
-								<div class="headerBlock__slide swiper-slide bg-wrap"><img class="swiper-lazy" src="#" data-src="img/@2x/head-img.jpg" alt=""/>
+								<div class="headerBlock__slide swiper-slide bg-wrap">
+									<div class="headerBlock__img-wrap"><img class="swiper-lazy" src="#" data-src="img/@2x/head-img.jpg" alt=""/>
+									</div>
 									<div class="headerBlock__block section">
 										<p>Индивидуальная скидка!</p>
 										<div class="headerBlock__title">Летнее предложение для загородных домов и дач
@@ -725,14 +731,53 @@
 			<section class="sReviews section" id="sReviews">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>sReviews</h2>
+						<h2>Отзывы клиентов</h2>
 					</div>
 					<div class="slider-wrap">
 						<div class="container">
 							<div class="sReviews__slider slider-3-js swiper-container"> 
 								<div class="swiper-wrapper"> 
 									<div class="sReviews__slide swiper-slide">
-										<div class="text-center">slide</div>
+										<div class="sReviews__item">
+											<div class="sReviews__head"><img class="avatar" src="img/@2x/rew-1.jpg" loading="lazy" alt=""/>
+												<div class="sReviews__title">Ольга Иванова
+												</div><img class="soc-i" src="img/svg/instagram.svg" alt="" loading="lazy"/>
+											</div>
+											<div class="sReviews__body"> 
+												<p> dadasd</p>
+												<p><a class="more" href="#">Показать еще </a></p>
+											</div>
+											<div class="sReviews__date">22 марта 2021 
+											</div>
+										</div>
+									</div>
+									<div class="sReviews__slide swiper-slide">
+										<div class="sReviews__item">
+											<div class="sReviews__head"><img class="avatar" src="img/@2x/rew-2.jpg" loading="lazy" alt=""/>
+												<div class="sReviews__title">Сергей Петров
+												</div><img class="soc-i" src="img/svg/vk.svg" alt="" loading="lazy"/>
+											</div>
+											<div class="sReviews__body"> 
+												<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение...</p>
+												<p><a class="more" href="#">Показать еще </a></p>
+											</div>
+											<div class="sReviews__date">22 марта 2021 
+											</div>
+										</div>
+									</div>
+									<div class="sReviews__slide swiper-slide">
+										<div class="sReviews__item">
+											<div class="sReviews__head"><img class="avatar" src="img/@2x/rew-3.jpg" loading="lazy" alt=""/>
+												<div class="sReviews__title">Мария Фролова
+												</div><img class="soc-i" src="img/svg/vk.svg" alt="" loading="lazy"/>
+											</div>
+											<div class="sReviews__body"> 
+												<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение...</p>
+												<p><a class="more" href="#">Показать еще </a></p>
+											</div>
+											<div class="sReviews__date">22 марта 2021 
+											</div>
+										</div>
 									</div>
 								</div>
 								<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
@@ -756,9 +801,177 @@
 			<section class="sCalc section" id="sCalc">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>sCalc</h2>
+						<h2>Калькулятор расчета стоимости</h2>
 					</div>
-					<div class="row"></div>
+					<div class="sCalc__step-wrap">
+							<div class="sCalc__step-item">
+								<div class="sCalc__head">
+									<div class="sCalc__title">Куда выбираете окна?
+									</div>
+									<div class="sCalc__count">Шаг 1 из 5 
+									</div>
+								</div>
+								<div class="sCalc__body">
+									<div class="row">
+										<div class="sCalc__col col-lg-3">
+												<label class="radio-block">
+													<input type="radio" name="step-1"/><span class="d-block"><span class="radio-block__img-wrap"><img src="img/svg/step-1-1.svg" alt=""/></span></span><span class="radio-block__title">В квартиру</span>
+												</label>
+										</div>
+										<div class="sCalc__col col-lg-3">
+												<label class="radio-block">
+													<input type="radio" name="step-1"/><span class="d-block"><span class="radio-block__img-wrap"><img src="img/svg/step-1-2.svg" alt=""/></span></span><span class="radio-block__title">В частный дом</span>
+												</label>
+										</div>
+										<div class="sCalc__col col-lg-3">
+												<label class="radio-block">
+													<input type="radio" name="step-1"/><span class="d-block"><span class="radio-block__img-wrap"><img src="img/svg/step-1-3.svg" alt=""/></span></span><span class="radio-block__title">В офис</span>
+												</label>
+										</div>
+									</div>
+								</div>
+								<div class="sCalc__footer">
+									<button class="sCalc__btn sCalc__btn--next" type="button">Далее
+									</button>
+								</div>
+							</div>
+							<div class="sCalc__step-item">
+								<div class="sCalc__head">
+									<div class="sCalc__title">Сколько нужно конструкций (окон, дверей)?
+									</div>
+									<div class="sCalc__count">Шаг 2 из 5 
+									</div>
+								</div>
+								<div class="sCalc__body">
+									<div class="row">
+										<div class="sCalc__col col-lg-3">
+												<label class="radio-block">
+													<input type="radio" name="step-2"/><span class="d-block"><span class="radio-block__img-wrap"><span class="radio-block__count">1</span><img src="img/svg/step-2-1.svg" alt=""/></span></span><span class="radio-block__title">1 шт.</span>
+												</label>
+										</div>
+										<div class="sCalc__col col-lg-3">
+												<label class="radio-block">
+													<input type="radio" name="step-2"/><span class="d-block"><span class="radio-block__img-wrap"><span class="radio-block__count">2</span><img src="img/svg/step-2-1.svg" alt=""/></span></span><span class="radio-block__title">2 шт.</span>
+												</label>
+										</div>
+										<div class="sCalc__col col-lg-3">
+												<label class="radio-block">
+													<input type="radio" name="step-2"/><span class="d-block"><span class="radio-block__img-wrap"><span class="radio-block__count">3</span><img src="img/svg/step-2-1.svg" alt=""/></span></span><span class="radio-block__title">3 шт.</span>
+												</label>
+										</div>
+										<div class="sCalc__col col-lg-3">
+												<label class="radio-block">
+													<input type="radio" name="step-2"/><span class="d-block"><span class="radio-block__img-wrap"><span class="radio-block__count">4</span><img src="img/svg/step-2-1.svg" alt=""/></span></span><span class="radio-block__title">4 шт.</span>
+												</label>
+										</div>
+									</div>
+								</div>
+								<div class="sCalc__footer">
+									<button class="sCalc__btn sCalc__btn--prev" type="button">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>Вернуться назад
+									</button>
+									<button class="sCalc__btn sCalc__btn--next" type="button">Далее
+									</button>
+								</div>
+							</div>
+							<div class="sCalc__step-item">
+								<div class="sCalc__head">
+									<div class="sCalc__title">Вам нужны только конструкции или ещё дополнительные услуги?
+									</div>
+									<div class="sCalc__count">Шаг 3 из 5 
+									</div>
+								</div>
+								<div class="sCalc__body">
+									<div class="row">
+										<div class="sCalc__col col-lg-3">
+												<label class="radio-block">
+													<input type="radio" name="step-3"/><span class="d-block"><span class="radio-block__img-wrap"> <img src="img/svg/step-2-1.svg" alt=""/></span></span><span class="radio-block__title">Только конструкции<br> (без установки)</span>
+												</label>
+										</div>
+										<div class="sCalc__col col-lg-3">
+												<label class="radio-block">
+													<input type="radio" name="step-3"/><span class="d-block"><span class="radio-block__img-wrap"> <img src="img/svg/step-3-2.svg" alt=""/></span></span><span class="radio-block__title">Конструкции + монтажные услуги</span>
+												</label>
+										</div>
+									</div>
+								</div>
+								<div class="sCalc__footer">
+									<button class="sCalc__btn sCalc__btn--prev" type="button">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>Вернуться назад
+									</button>
+									<button class="sCalc__btn sCalc__btn--next" type="button">Далее
+									</button>
+								</div>
+							</div>
+							<div class="sCalc__step-item">
+								<div class="sCalc__head">
+									<div class="sCalc__title">Выберите монтажные услуги
+									</div>
+									<div class="sCalc__count">Шаг 4 из 5 
+									</div>
+								</div>
+								<div class="sCalc__body">
+									<div class="sCalc__center">
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Доставка</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Демонтаж старых конструкций</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Монтаж новой конструкции</span>
+										</label>
+										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">Отделка откосов</span>
+										</label>
+									</div>
+								</div>
+								<div class="sCalc__footer">
+									<button class="sCalc__btn sCalc__btn--prev" type="button">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>Вернуться назад
+									</button>
+									<button class="sCalc__btn sCalc__btn--next" type="button">Далее
+									</button>
+								</div>
+							</div>
+							<div class="sCalc__step-item">
+								<div class="sCalc__head">
+									<div class="sCalc__title">Оставьте телефон, на который мы можем сообщить расчет
+									</div>
+									<div class="sCalc__count">Шаг 5 из 5 
+									</div>
+								</div>
+								<div class="sCalc__body">
+									<div class="form-wrap">
+										<form> 
+											<div class="row"> 
+												<div class="col-lg-6">
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+													</div>
+													<!-- +e.input-wrap-->
+													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш номер телефона"/>
+														<div class="form-wrap__code">+7
+														</div>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="col-lg-6">
+													<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Комментарий (необязательно)"></textarea>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+											<button class="form-wrap__btn" type="submit">Отправить на расчет
+											</button>
+											<div class="form-wrap__polite">Я согласен(а) на обработку и хранение моих персональных данных в соответствии с <a href="#">условиями</a>.
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+					</div>
 				</div>
 			</section>
 			<!-- end sCalc-->
@@ -839,9 +1052,7 @@
 					<!-- +e.input-wrap-->
 					<button class="form-wrap__btn btn" type="submit"> 
 					</button>
-					<div class="form-wrap__polite">
-						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-						</label>
+					<div class="form-wrap__polite">Я согласен(а) на обработку и хранение моих персональных данных в соответствии с <a href="#">условиями</a>.
 					</div>
 				</form>
 			</div>

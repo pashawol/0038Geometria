@@ -22,7 +22,7 @@
 		--swiperBgDefHover: $primary;
 
 
-	 
+	--sp-base: #{rem(40)};
 }
 
 @include media-breakpoint-up(xl) {}

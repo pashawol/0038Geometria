@@ -137,8 +137,8 @@ const JSCCommon = {
 	inputMask() {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
-		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask("+9(999)999-99-99").mask(InputTel);
+		InputTel.forEach(element => element.setAttribute("pattern", "[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
+		Inputmask("(999)999-99-99").mask(InputTel);
 	},
 
 	// /inputMask
@@ -254,8 +254,17 @@ function eventHandler() {
 	})); // modal window
 
 	const swiper3 = new Swiper('.slider-3-js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 3,
-		spaceBetween: 20
+		slidesPerView: 1,
+		spaceBetween: 20,
+		breakpoints: {
+			992: {
+				slidesPerView: 2
+			},
+			// when window width is >= 640px
+			1200: {
+				slidesPerView: 3
+			}
+		}
 	})); // modal window
 }
 
