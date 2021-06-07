@@ -242,7 +242,7 @@ $grid-breakpoints: (xs: 0,
 $container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px,
+  xl: 1200px,
   xxl: 1320px) !default;
 // scss-docs-end container-max-widths
 
@@ -614,12 +614,12 @@ $input-padding-y-lg: $input-btn-padding-y-lg !default;
 $input-padding-x-lg: $input-btn-padding-x-lg !default;
 $input-font-size-lg: $input-btn-font-size-lg !default;
 
-$input-bg: $white !default;
+$input-bg:  #F1F2F0  !default;
 $input-disabled-bg: $gray-200 !default;
 $input-disabled-border-color: null !default;
 
 $input-color: $body-color !default;
-$input-border-color: $gray-400 !default;
+$input-border-color: #F1F2F0 !default;
 $input-border-width: 1px !default;
 $input-box-shadow: $box-shadow-inset !default;
 
@@ -627,7 +627,7 @@ $input-border-radius: rem(8) !default;
 $input-border-radius-sm: $border-radius-sm !default;
 $input-border-radius-lg: $border-radius-lg !default;
 
-$input-focus-bg: $input-bg !default;
+$input-focus-bg: $white !default;
 $input-focus-border-color: tint-color($component-active-bg, 50%) !default;
 $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;

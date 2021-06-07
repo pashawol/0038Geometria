@@ -3,7 +3,16 @@ mixin sTemplates(data)
 	+b.SECTION.sTemplates.section#sTemplates&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sTemplates
-				
+				h2 Типовые решения для квартир
 			.row
+				mixin item(t)
+					+e.col.col-xl-3.col-6
+						+e.item
+							+e.title= t
+							+e.price от 55 500 руб
+							+e.btn(href="#") Подробнее
+				+item(`Однокомнатная квартира`)
+				+item(`Двухкомнатная квартира`)
+				+item(`Трехкомнатная квартира`)
+				+item(`Четырехкомнатная квартира`)
 	// end sTemplates

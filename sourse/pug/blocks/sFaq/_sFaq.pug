@@ -3,7 +3,20 @@ mixin sFaq(data)
 	+b.SECTION.sFaq.section#sFaq&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sFaq
+				h2 Подробно про качество конструкций
 				
-			.row
+			+b.accordion-block
+				mixin item(t)
+					+b.accordion-item&attributes(attributes)
+						+e.head
+							= t
+							+e.toggle
+								+icon("chefron-down")
+						+e.body
+							p Наши монтажные бригады заинтересованы в том, чтобы доставка была выполнена безопасно для конструкций (иначе изъяны будут компенсироваться за наш счет). Перевозка окон осуществляется в специальных автомобилях с надежным закреплением готовых конструкций и с защитой от осадков.
+				+item(`Сами оконные конструкции`).active
+				+item(`Доставка и подъем на этаж`)
+				+item(`Демонтаж старых окон`)
+				+item(`Сами оконные конструкции`)
+				+item(`Доставка и подъем на этаж`)
 	// end sFaq

@@ -3,23 +3,29 @@ mixin topLine()
 	+b.topLine.section&attributes(attributes)
 		.container 
 			.row
-				+e.logo-wrap.col-auto
+				+e.logo-wrap.col-xl-auto.col
 					a(href="/") 
 						img(src="img/svg/logo.svg", alt="")
-				.col
+				.col.d-none.d-xl-block
 					+e.small Нижний Новгород, ул. Окская гавань, д. 3
 					+e.time Пн-Пт: 9:00 - 18:00, Сб: 9:00 - 14:00, Вс: выходной
-				.col-auto
+				.col-auto.d-none.d-md-block
 					+e.soc-link(href="#"): img(src="img/svg/viber.svg", alt="")
 					+e.soc-link(href="#"): img(src="img/svg/whatsapp.svg", alt="")
 					+e.soc-link(href="#"): img(src="img/svg/telegram.svg", alt="")
 				.col-auto.text-end
 					div: +e.tel(href="tel:+7(920)016-29-99") +7 (920) 016-29-99
-					+e.call(href="#") Заказать звонок
-				.col-auto
+					.d-none.d-md-block
+						+e.call(href="#") Заказать звонок
+					.d-md-none
+						+e.soc-link(href="#"): img(src="img/svg/viber.svg", alt="")
+						+e.soc-link(href="#"): img(src="img/svg/whatsapp.svg", alt="")
+						+e.soc-link(href="#"): img(src="img/svg/telegram.svg", alt="")
+				.col-auto.d-none.d-lg-block
 					+e.btn(href="#") 
 						+icon('calculator')
 						| Калькулятор цен
-				.col-auto.d-none
-
+				.col-auto.d-xl-none
+					+b.toggle-menu-mobile--js
+						span
 	// end topLine

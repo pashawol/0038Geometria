@@ -12,3 +12,90 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sFaq
+
+.accordion-block{
+	counter-reset: num;
+}
+.accordion-item{
+	border-radius: 15px;
+	border: 1px solid #F1F2F0;
+	// mix-blend-mode: rem(20);
+	margin-bottom: rem(20);
+	@include mt;
+	&:not(.active) &__body{
+		display: none;
+	}
+	&:not(.active){
+		background-color: transparent;
+		background: #F1F2F0;
+	}
+	&__head{
+		padding: rem(24) rem(20);
+		display: flex;
+		align-items: center;
+		width: 100%;
+		position: relative;
+		font-size: rem(20);
+		font-weight: bold;
+		cursor: pointer;
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+			width: 40px;
+			height: 40px; 
+			border-radius: 50%;
+			background: #FFFFFF; 
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: $primary;
+			position: absolute;
+			left: rem(20);
+			top: rem(20);
+			@include mt;
+
+		}
+	}
+	&.active &__head{
+		&::before{
+			background: #F1F2F0;
+		}
+	}
+	&__toggle{
+		content: '';
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: #FFFFFF;
+		display: flex;
+		justify-content: center;
+		align-items: center; 
+		right: rem(20);
+		top: rem(20);
+		background-color: $primary;
+		color: #fff;
+		@include mt;
+		.icon{
+			font-size: rem(15);
+		}
+		
+	}
+	&.active &__toggle{
+		background: #F1F2F0;
+		color: $body-color;
+		transform: rotate(180deg);
+	}
+	&__body{
+		padding: 0 rem(20) rem(20);
+		p{
+			line-height: 200%;
+		}
+
+	}
+	&__head,
+	&__body{
+		padding-left: rem(80);
+		padding-right: rem(80);
+	}
+}

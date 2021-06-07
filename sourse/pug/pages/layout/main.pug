@@ -27,11 +27,13 @@ html(lang="ru")
 		meta(name="viewport" content="width=570,  maximum-scale=1 , user-scalable=no")
 		script.
 			let viewport = document.querySelector("meta[name=viewport]");
-			window.addEventListener('resize', () => { 
-				this.innerWidth > 570 
-					? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
-					:  viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
-			}, { passive: true });
+			if( preg_match('/iPhone|iPad|iPod/i', $_SERVER ['HTTP_USER_AGENT']) ) { 
+				window.addEventListener('resize', () => { 
+					this.innerWidth > 570 
+						? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
+						:  viewport.content = "width=570, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
+				}, { passive: true });
+			}
 		link(type="image/ico", href='img/favicon.ico', rel='shortcut icon') 
 		<meta name="format-detection" content="telephone=no"> 
 		+allcss()

@@ -12,6 +12,7 @@
 		// --sPB: ;
 		// --sTPB: ;
 		&__step-wrap{
+			margin-bottom: rem(5);
 
 			background-color: #F1F2F0;
 			
@@ -24,6 +25,9 @@
 			}
 		}
 		&__step-item{
+			&:not(.active){
+				display: none;
+			}
 			@include media-breakpoint-up(xl) {
 				
 				background-image: url(../img/@2x/calc-bg-left.png),
@@ -39,8 +43,8 @@
 		@include media-breakpoint-up(xl) {
 			min-height: rem(520);
 
-			padding: rem(40) rem(40);
 		}
+		padding: rem(40) rem(40);
 
 
 	}
@@ -50,7 +54,7 @@
 	&__title{
 		@extend .h3;
 		font-weight: bold;
-		margin-bottom: rem(20);
+		margin-bottom: rem(30);
 	}
 	&__count{
 		margin-bottom: var(--sp-base);
