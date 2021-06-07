@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=570,  maximum-scale=1 , user-scalable=no">
 		<script>
 			let viewport = document.querySelector("meta[name=viewport]");
-			if( preg_match('/iPhone|iPad|iPod/i', $_SERVER ['HTTP_USER_AGENT']) ) { 
+			if (navigator.platform.indexOf("iPad") != -1) {
 				window.addEventListener('resize', () => { 
 					this.innerWidth > 570 
 						? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 
@@ -20,7 +20,7 @@
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="02_1024.jpg">
+	<body data-bg="02_720.jpg">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-xl-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -60,7 +60,7 @@
 							<div class="col-auto text-end">
 								<div><a class="topLine__tel" href="tel:+7(920)016-29-99">+7 (920) 016-29-99</a>
 								</div>
-								<div class="d-none d-md-block"><a class="topLine__call" href="#">Заказать звонок</a>
+								<div class="d-none d-md-block"><a class="topLine__call link-modal-js" href="#modal-call">Заказать звонок</a>
 								</div>
 								<div class="d-md-none"><a class="topLine__soc-link" href="#"><img src="img/svg/viber.svg" alt=""/></a><a class="topLine__soc-link" href="#"><img src="img/svg/whatsapp.svg" alt=""/></a><a class="topLine__soc-link" href="#"><img src="img/svg/telegram.svg" alt=""/></a>
 								</div>
@@ -109,7 +109,7 @@
 			<section class="sPageHead" id="sPageHead">
 				<div class="container">
 					<div class="row justify-content-center">
-						<div class="sPageHead__col col section">
+						<div class="col section">
 							<nav aria-label="breadcrumb">
 								<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 									<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
@@ -126,7 +126,7 @@
 							<div class="sPageHead__date">22 марта 2021 
 							</div>
 						</div>
-						<div class="col d-none d-md-block"> 
+						<div class="col-4 col-lg-6 d-none d-md-block"> 
 							<div class="sPageHead__imgWrap"> 
 								<!-- picture-->
 								<picture> 
@@ -180,7 +180,7 @@
 						<h3>Похожее из блога</h3>
 					</div>
 					<div class="sBlog__row row">
-						<div class="col-lg-4"> <a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
+						<div class="col-md-6 col-lg-4"> <a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
 							<!-- picture-->
 							<picture> 
 								<source type="image/webp" srcset="img/@2x/webp/headImg.webp"/><img src="img/@2x/headImg.jpg" alt="" loading="lazy"/>
@@ -189,7 +189,7 @@
 							<div><span class="blogItem__btn">Читать</span>
 							</div></a>
 						</div>
-						<div class="col-lg-4"> <a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
+						<div class="col-6 col-lg-4 d-none d-md-block"> <a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
 							<!-- picture-->
 							<picture> 
 								<source type="image/webp" srcset="img/@2x/webp/contentImg.webp"/><img src="img/@2x/contentImg.png" alt="" loading="lazy"/>
@@ -198,7 +198,7 @@
 							<div><span class="blogItem__btn">Читать</span>
 							</div></a>
 						</div>
-						<div class="col-lg-4"> <a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
+						<div class="col-6 col-lg-4 d-none d-lg-block"><a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
 							<!-- picture-->
 							<picture> 
 								<source type="image/webp" srcset="img/@2x/webp/blogImg.webp"/><img src="img/@2x/blogImg.jpg" alt="" loading="lazy"/>
@@ -245,7 +245,7 @@
 							<script>
 								ymaps.ready(function () {
 								var myMap = new ymaps.Map('map', {
-									center: [53.425920, 58.993065],
+									center: [56.250197, 43.936412],
 									zoom: 16
 										}, {
 											searchControlProvider: 'yandex#search'
@@ -259,12 +259,12 @@
 											// Необходимо указать данный тип макета.
 											iconLayout: 'default#image',
 											// Своё изображение иконки метки.
-											iconImageHref: 'img/@2x/mark.png',
+											iconImageHref: 'img/svg/mark.svg',
 											// Размеры метки.
-											iconImageSize: [400, 400],
+											iconImageSize: [60, 60],
 											// Смещение левого верхнего угла иконки относительно
 											// её "ножки" (точки привязки).
-											iconImageOffset: [-200, -200]
+											iconImageOffset: [-30, -65]
 										});
 								
 								myMap.geoObjects
@@ -283,13 +283,13 @@
 			<footer class="footer">
 				<div class="container">
 					<div class="footer__row row"> 
-						<div class="footer__lCol col-lg-auto"> 
+						<div class="footer__col col-xl order-xl-second"><a class="footer__logo" href="/"><img src="img/svg/logo-footer.svg" alt="Логотип" loading="lazy"/></a>
+						</div>
+						<div class="footer__lCol col-xl-auto order-xl-first"> 
 							<div class="footer__copyright">&copy;&nbsp;22021. Официальный сайт компании &laquo;Геометрия&raquo;. Все&nbsp;права защищены. Не&nbsp;является публичной офертой.
 							</div><a class="footer__polite" href="#">Политика конфиденциальности</a>
 						</div>
-						<div class="footer__col col"> <a class="footer__logo" href="/"><img src="img/svg/logo-footer.svg" alt="Логотип" loading="lazy"/></a>
-						</div>
-						<div class="footer__rCol col-lg-auto"><a class="footer__toTop" href="#header">Наверх<img src="img/svg/toTop.svg" alt=""/></a>
+						<div class="footer__rCol col-xl-auto"><a class="footer__toTop" href="#header">Наверх<img src="img/svg/toTop.svg" alt=""/></a>
 							<div class="footer__dev"><span>Разработка сайта –&nbsp;</span><a href="#" target="_blank">AD HEADS</a>
 							</div>
 						</div>
@@ -300,24 +300,36 @@
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
+				<div class="form-wrap__title">Заказать звонок
+				</div>
+				<p>Заполните форму и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей</p>
 				<form>
-					<div class="text-center">
-						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
-						</div>
-						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta at blanditiis error quis incidunt ratione. Expedita ullam repellendus possimus eos ex quidem quisquam quam voluptatum ipsa doloremque molestias accusamus rem deserunt tenetur incidunt exercitationem laboriosam consequuntur, repudiandae dolore odit earum voluptatibus autem amet! Eligendi omnis necessitatibus at accusamus excepturi, debitis magnam alias. Dolore voluptatum hic assumenda quo non facilis sed sint fugit ex quam. Natus eligendi sequi repellat earum doloremque vero consequatur repudiandae ipsam libero odit alias quia expedita magni fugit perspiciatis aperiam maxime illo, voluptatem omnis tenetur suscipit molestias beatae distinctio totam? Excepturi quaerat dolorum natus reprehenderit voluptas officiis totam recusandae harum autem ipsum laboriosam dolorem, tempore, maxime nam dignissimos aperiam cupiditate accusantium deleniti. Iusto harum facere blanditiis minima dolor assumenda error nisi soluta perferendis animi? Distinctio maxime, perspiciatis neque dignissimos reprehenderit obcaecati quo provident, dolores labore laborum adipisci at veniam reiciendis aliquam nemo minus cumque sequi quasi architecto aliquid magnam tempore expedita? Repellendus veniam est dicta nihil, aspernatur molestiae ducimus quibusdam voluptatibus saepe. Repudiandae itaque rem animi voluptas voluptate? Expedita numquam architecto totam quo quod quibusdam ut, rem earum, similique dolorum excepturi nobis quis, tempore et exercitationem repellendus! Ipsa, consequuntur praesentium quaerat excepturi voluptas, delectus maiores necessitatibus explicabo consequatur neque optio doloremque temporibus similique doloribus pariatur velit aliquam magni cum! Repellat mollitia quam saepe porro, culpa unde! Molestias laboriosam vitae nihil facere corporis cupiditate eos ea saepe dolorem, eaque laudantium quam distinctio, fugit placeat maxime enim dicta rem eligendi accusamus, eum id. Incidunt, illum quaerat ab modi iste quasi non laboriosam unde, atque fugit delectus cumque eligendi sapiente dolore autem omnis alias, adipisci dicta illo corrupti optio? Esse error numquam fugit itaque ipsam fugiat nostrum repudiandae recusandae, nobis repellat aperiam officiis labore possimus neque velit, a obcaecati illum quasi suscipit veritatis! Ea earum obcaecati impedit possimus adipisci vitae animi commodi consequatur omnis amet? Quod sed doloremque id nesciunt iure recusandae iste voluptatibus unde eligendi porro nulla architecto voluptates quasi temporibus, fugit asperiores quis! Facere non, illo quisquam cumque voluptate earum voluptatem corporis eum cum commodi omnis autem sequi nisi sit iure aperiam iusto dolor harum? Ex eligendi vero reiciendis culpa ipsa suscipit debitis, quam earum maxime. Nemo officia quasi consequuntur velit rem culpa ipsa quas earum excepturi amet fuga eum consequatur, repellendus commodi facere maxime. Magni voluptas consequatur facere dolores ut culpa, expedita fugit? Quae placeat asperiores est, fuga eligendi eius similique necessitatibus explicabo? Eveniet corporis tempora reiciendis, dolore ipsam quos aut ea alias amet nihil? Excepturi maiores mollitia inventore voluptate est ullam reprehenderit itaque iure quasi non molestias, vel veniam alias! Obcaecati laudantium ex incidunt autem ipsam a suscipit, in dolorem error deserunt minima laborum nulla facere officia sunt. Aliquid repellat rem sunt reprehenderit. Fugit perferendis officiis labore nesciunt pariatur optio minima aperiam et similique maxime odio laudantium eligendi deleniti culpa exercitationem impedit, fugiat magni vero temporibus eos obcaecati esse possimus asperiores dolores! Quod iure eius minus adipisci? Architecto sapiente corrupti error! Magni ea tempore laboriosam minus totam facilis iure voluptates nostrum officiis dignissimos nihil necessitatibus quam in, commodi molestiae expedita facere asperiores ad! Corporis delectus magnam, vel aspernatur rem laboriosam autem soluta aliquam iure impedit? Deserunt ad nam excepturi, quibusdam qui nisi necessitatibus, voluptatibus deleniti quo cumque ipsam cum repudiandae impedit in a laborum dignissimos ratione labore vitae officia quaerat magnam. Saepe ullam omnis harum reprehenderit beatae pariatur est? Animi dolores necessitatibus corrupti velit architecto obcaecati doloremque vero sapiente quaerat praesentium? Veniam illum iusto ea sunt deserunt, omnis consequatur est adipisci aliquid magnam quibusdam animi debitis magni excepturi accusamus vel facilis ipsa blanditiis expedita cumque fugiat! Aspernatur voluptatum quos corrupti blanditiis? Sapiente pariatur sunt culpa nesciunt consequatur eaque veritatis laborum possimus, saepe at nam amet exercitationem assumenda temporibus illo aliquid asperiores quae impedit beatae voluptatem? Vitae, totam quos odio nobis perferendis unde! Voluptates voluptatum, sint iure aliquid quis quod voluptatem saepe et similique, repellendus dolorum. Sed vel illo quisquam cum aut, ullam impedit quaerat a odit alias fugit repudiandae. Consequuntur voluptas explicabo eligendi, beatae esse nihil laborum illo rerum ab dolorum nemo iste est doloremque magnam. Repellendus in voluptates cumque ullam, cum odio quam deserunt optio doloremque modi nobis itaque cupiditate ea, neque exercitationem laborum, obcaecati mollitia earum debitis accusamus nisi dolorem autem libero dicta! Atque ad doloribus distinctio cumque nobis labore placeat? Necessitatibus, accusamus deleniti numquam asperiores distinctio tempora consectetur minus veritatis cum repellat architecto voluptatibus minima omnis aliquam fugit maiores eos veniam consequatur, rerum ex illo facere? Suscipit distinctio qui quae asperiores voluptates nobis unde, nisi soluta natus aspernatur tempore libero, nam iure? Modi, explicabo iusto tenetur placeat praesentium, sunt voluptatum soluta reiciendis quam atque hic dolorum in, esse consequuntur voluptate animi doloremque saepe expedita voluptates? Consectetur sint assumenda quaerat deleniti. Exercitationem, quas beatae. Ut ipsam eum nisi fugiat numquam saepe tempore dolorem necessitatibus consequatur, voluptatem eligendi magni laborum nostrum sed accusamus ducimus laudantium minus animi. Totam expedita vero voluptas libero ipsa! Facilis ullam vel libero aliquam sit itaque quasi delectus a rerum laborum, possimus, eos inventore nulla, excepturi exercitationem aliquid unde porro. Odio nulla labore repellat exercitationem cupiditate voluptates, obcaecati asperiores eligendi delectus commodi deserunt provident sit nam praesentium culpa cum amet explicabo, nisi dolores? Recusandae provident veritatis porro corporis voluptatem assumenda necessitatibus at. Sint quam in facere nihil hic cupiditate porro sapiente nisi, et ratione placeat commodi unde excepturi error repellat earum perspiciatis quisquam amet tempora. Expedita, ipsum? Molestias mollitia voluptatum sapiente inventore, perspiciatis ab laudantium, voluptatibus amet aliquid laborum autem? Adipisci aliquid voluptatum numquam quas quia ullam error sed illo, sit minima, consectetur temporibus unde? Rerum minima necessitatibus est expedita assumenda nesciunt, modi ea fugiat consectetur ad corporis velit ducimus quia aut cumque iusto voluptatibus et perferendis ipsum! Excepturi perferendis veritatis cumque quo, quod facere facilis impedit magnam numquam repellat ad tempora! Pariatur distinctio laborum, quaerat dolorem nostrum totam animi. Ipsa distinctio consectetur explicabo culpa, esse reprehenderit eveniet obcaecati, repudiandae dolorum vero expedita modi exercitationem iure aut provident sit cum adipisci consequatur id delectus voluptatum fuga ducimus natus. Cum, aperiam impedit error illo hic similique quo iure omnis ullam sapiente modi.</p>
-					</div>
 					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя"/> 
 					</div>
 					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
-					</button>
-					<div class="form-wrap__polite">Я согласен(а) на обработку и хранение моих персональных данных в соответствии с <a href="#">условиями</a>.
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш номер телефона"/>
+						<div class="form-wrap__code">+7
+						</div>
 					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn" type="submit">Отправить заявку
+					</button>
 				</form>
+				<div class="form-wrap__polite">Я согласен(а) на обработку и хранение моих персональных данных в соответствии с <a href="#">условиями</a>.
+				</div>
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div class="modal-win" id="modal-thanks" style="display: none">
+			<div class="form-wrap">
+				<div class="form-wrap__title">Спасибо <br> за обращение!
+				</div>
+				<p>Мы свяжемся с Вами в ближайшее время для уточнения деталей</p>
+				<button class="form-wrap__btn modal-close-js" type="button">Закрыть
+				</button>
+			</div>
+		</div>
+		<!-- #modal-thanks-->
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

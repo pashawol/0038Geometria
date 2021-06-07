@@ -2,13 +2,13 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			+e.row.row 
-				+e.lCol.col-lg-auto 
-					+e.copyright &copy;&nbsp;22021. Официальный сайт компании &laquo;Геометрия&raquo;. Все&nbsp;права защищены. Не&nbsp;является публичной офертой.
-					+e.polite(href="#") Политика конфиденциальности
-				+e.col.col 
+				+e.col.col-xl.order-xl-second
 					+e.logo(href="/")
 						img(src="img/svg/logo-footer.svg" alt="Логотип" loading="lazy")
-				+e.rCol.col-lg-auto
+				+e.lCol.col-xl-auto.order-xl-first 
+					+e.copyright &copy;&nbsp;22021. Официальный сайт компании &laquo;Геометрия&raquo;. Все&nbsp;права защищены. Не&nbsp;является публичной офертой.
+					+e.polite(href="#") Политика конфиденциальности
+				+e.rCol.col-xl-auto
 					+e.toTop(href="#header") Наверх
 						img(src="img/svg/toTop.svg" alt="")
 

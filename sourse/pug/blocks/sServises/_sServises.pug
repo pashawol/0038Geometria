@@ -12,14 +12,14 @@ mixin sServises(data)
 							+pic(`servises-mob-${i}.png`,'',0).d-xl-none.text-center
 							+e.caption
 								+e.title= t
-								+e.btn(href="#") Уточнить цену
+								+e.btn(href="#modal-call").link-modal-js Уточнить цену
 				+item(`Пластиковые окна`,`1`)
 				+item(`Пластиковые двери`,`2`)
 				+item(`Остекленение балконов`,`3`)
 			h3 Дополнительные услуги
 			+e.row.row
 				mixin item(i,p)
-					+e.col-other.col
+					+e.col-other.col-lg.col-4
 						img(src=`img/svg/other-servises-${i}.svg` loading="lazy", alt="")
 						p!= p
 				+item(`1`,`Монтаж/демонтаж окон и&nbsp;дверей`)

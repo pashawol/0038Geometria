@@ -6,7 +6,7 @@
 
 	picture {
 		position: relative;
-		@include media-breakpoint-up(xl) {
+		@include media-breakpoint-up(xxl) {
 			width: 550px;
 			@include block(550);
 		}

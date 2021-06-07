@@ -29,7 +29,7 @@ mixin sContact()
 					script.
 						ymaps.ready(function () {
 						var myMap = new ymaps.Map('map', {
-							center: [53.425920, 58.993065],
+							center: [56.250197, 43.936412],
 							zoom: 16
 								}, {
 									searchControlProvider: 'yandex#search'
@@ -43,12 +43,12 @@ mixin sContact()
 									// Необходимо указать данный тип макета.
 									iconLayout: 'default#image',
 									// Своё изображение иконки метки.
-									iconImageHref: 'img/@2x/mark.png',
+									iconImageHref: 'img/svg/mark.svg',
 									// Размеры метки.
-									iconImageSize: [400, 400],
+									iconImageSize: [60, 60],
 									// Смещение левого верхнего угла иконки относительно
 									// её "ножки" (точки привязки).
-									iconImageOffset: [-200, -200]
+									iconImageOffset: [-30, -65]
 								});
 
 						myMap.geoObjects

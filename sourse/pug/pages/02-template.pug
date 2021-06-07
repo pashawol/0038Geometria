@@ -21,7 +21,8 @@ block variables
 	- let  mainPage= null 
 	//- - let  bg= '02.jpg'
 	//- - let  bg= '02_1280.jpg'
-	- let  bg= '02_1024.jpg'
+	//- - let  bg= '02_1024.jpg'
+	- let  bg= '02_720.jpg'
 
 block title
 	- let  title= 'title'
@@ -37,17 +38,17 @@ block pagecontent
 	+sContent()
 	+sBlog(`Похожее из блога`)
 		+e.row.row
-			.col-lg-4 
+			.col-md-6.col-lg-4 
 				+blogItem({
 					img: 'headImg.jpg',
 					title: `Использование современного оборудования`
 				})
-			.col-lg-4 
+			.col-6.col-lg-4.d-none.d-md-block 
 				+blogItem({
 					img: 'contentImg.png',
 					title: `Изменение географии доставки`
 				})
-			.col-lg-4 
+			.col-6.col-lg-4.d-none.d-lg-block
 				+blogItem({
 					img: 'blogImg.jpg',
 					title: `Пополнение ассортимента новыми моделями`

@@ -27,7 +27,7 @@ html(lang="ru")
 		meta(name="viewport" content="width=570,  maximum-scale=1 , user-scalable=no")
 		script.
 			let viewport = document.querySelector("meta[name=viewport]");
-			if( preg_match('/iPhone|iPad|iPod/i', $_SERVER ['HTTP_USER_AGENT']) ) { 
+			if (navigator.platform.indexOf("iPad") != -1) {
 				window.addEventListener('resize', () => { 
 					this.innerWidth > 570 
 						? viewport.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" 

@@ -95,15 +95,15 @@
 		padding-bottom: rem(35);
 		li {
 			list-style: none;
-			padding-bottom: rem(16);
+			// padding-bottom: rem(16);
 			position: relative;
 			padding-left: rem(20);
-			line-height: 1.25;
+			line-height: 225%;
 			&::before {
 				content: "";
 				position: absolute;
 				left: 0;
-				top: 7px;
+				top: 13px;
 				width: 5px;
 				height: 5px;
 				border-radius: 50%;

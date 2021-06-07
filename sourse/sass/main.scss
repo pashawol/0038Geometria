@@ -72,7 +72,7 @@ $output-bourbon-deprecation-warnings: false;
 
 	&-item {
 		position: relative;
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 
 		&:not(:first-child) {

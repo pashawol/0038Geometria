@@ -24,18 +24,20 @@ mixin ie11()
 
 mixin slider()
 	.slider-wrap
+		.control-wrap
 			.container
 				+e.slider.slider-js.swiper-container 
 					.swiper-wrapper
 						- for (var x = 0; x < 3; x++)
 							block
-					+arrow
-					.swiper-pagination
+			+arrow
+			.swiper-pagination
 mixin slider3()
 	.slider-wrap
+		.control-wrap
 			.container
 				+e.slider.slider-3-js.swiper-container 
 					.swiper-wrapper 
 						block
-					+arrow
-					.swiper-pagination
+			+arrow
+			.swiper-pagination

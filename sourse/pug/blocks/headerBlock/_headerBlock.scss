@@ -1,7 +1,12 @@
 // start .headerBlock
 .headerBlock {
---sPT: #{rem(64)};
---sPB: #{rem(74)};
+	@include media-breakpoint-up(xxl) {
+
+		--sPT: #{rem(64)};
+		--sPB: #{rem(74)};
+	}
+	--sPT: #{rem(44)};
+	--sPB: #{rem(44)};
 padding-bottom: rem(10);
 padding-top: rem(20);
 	&__slide{
@@ -13,12 +18,12 @@ padding-top: rem(20);
 		&::after {
 			content: '';
 			position: absolute;
-			width: 30%;
+			width: 60%;
 			height: 100%;
-			left: 20%;
+			left: 30%;
 			top: 0;
 			z-index: -1;
-			background: linear-gradient(90deg, #DFD3C3 0%, rgba(223, 211, 195, 0) 25%);
+			background: linear-gradient(90deg, #DFD3C3 15%, rgba(223, 211, 195, 0) 25%);
 		}
 		img{
 			object-fit: cover;
@@ -48,8 +53,12 @@ padding-top: rem(20);
 		line-height: 1.4;
 	}
 	&__block{
-		max-width: rem(680);
-		padding-left: rem(112);
+		max-width: rem(540);
+		@include media-breakpoint-up(xxl) {
+			max-width: rem(680);
+			padding-left: rem(112);
+		}
+		padding-left: rem(60);
 		z-index: 2;
 		position: relative;
 		
@@ -97,6 +106,11 @@ padding-top: rem(20);
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-down(md) {
+		.swiper-button-hand{
+			display: none !important;
+		}
+	}
 
 }
 

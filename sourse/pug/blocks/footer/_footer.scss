@@ -6,28 +6,60 @@
 	}
 	padding-bottom: var(--sPB);
 
+	@include media-breakpoint-down(xl) {
+		text-align: center;
+	}
+
 	&__row {
 	}
 	&__logo {
 		text-align: center;
 		display: inline-block;
-		margin-right: rem(150);
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(150);
+			margin-top: rem(-25);
+		}
 		@include media-breakpoint-up(xxl) {
 			margin-right: rem(200);
 		}
-		margin-top: rem(-25);
+
+		@include media-breakpoint-down(xl) {
+			margin-bottom: rem(30);
+		}
 	}
 	&__lCol {
+		@include media-breakpoint-down(xl) {
+			display: flex;
+			flex-direction: column-reverse;
+		}
 	}
 	&__rCol {
-		text-align: right;
+		@include media-breakpoint-up(xl) {
+			text-align: right;
+		}
+		@include media-breakpoint-down(xl) {
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+		}
 	}
 	&__copyright {
 		max-width: rem(440);
-		margin-bottom: rem(25);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(25);
+		}
+		@include media-breakpoint-down(xl) {
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 	&__polite {
 		color: $secondary;
+		display: inline-block;
+		@include media-breakpoint-down(xl) {
+			margin-bottom: rem(20);
+		}
 	}
 	&__col {
 		text-align: center;
@@ -51,6 +83,9 @@
 		}
 	}
 	&__dev {
+		@include media-breakpoint-down(xl) {
+			margin-bottom: rem(20);
+		}
 		span {
 			color: #858f98;
 		}
