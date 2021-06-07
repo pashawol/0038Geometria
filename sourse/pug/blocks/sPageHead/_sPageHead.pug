@@ -1,0 +1,14 @@
+mixin sPageHead(data)
+	// start sPageHead
+	+b.SECTION.sPageHead#sPageHead&attributes(attributes)
+		.container
+			.row.justify-content-center
+				+e.col.col.section
+					+breadcrumb('Главная','Блог','Использование современного оборудования')
+					+b.section-title
+						h1 Использование <br>современного<br> оборудования
+					+e.date 22 марта 2021 
+				.col.d-none.d-md-block 
+					+e.imgWrap 
+						+pic('headImg.jpg','','')
+	// end sPageHead

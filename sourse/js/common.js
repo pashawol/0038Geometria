@@ -249,6 +249,13 @@ function eventHandler() {
 		spaceBetween: 20,
 	});
 	// modal window
+	const swiper3 = new Swiper('.slider-3-js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: 3,
+		spaceBetween: 20,
+	});
+	// modal window
 
 };
 if (document.readyState !== 'loading') {

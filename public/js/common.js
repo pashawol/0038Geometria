@@ -252,6 +252,11 @@ function eventHandler() {
 		slidesPerView: 1,
 		spaceBetween: 20
 	})); // modal window
+
+	const swiper3 = new Swiper('.slider-3-js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 3,
+		spaceBetween: 20
+	})); // modal window
 }
 
 ;

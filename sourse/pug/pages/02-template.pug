@@ -1,0 +1,42 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sPrices/_sPrices.pug
+include ../blocks/sCharacters/_sCharacters.pug
+include ../blocks/sFurniture/_sFurniture.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sCases/_sCases.pug
+include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sCalc/_sCalc.pug
+include ../blocks/sSteps/_sSteps.pug
+include ../blocks/sStock/_sStock.pug
+include ../blocks/sTemplates/_sTemplates.pug
+include ../blocks/sPageHead/_sPageHead.pug
+include ../blocks/sBlog/_sBlog.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= '02.jpg'
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+		+topLine
+		+top-nav()
+	+sPageHead()
+	+sContent()
+	+sBlog(`Похожее из блога`)
+	+sContact()
+	+footer()
+
+
+
+

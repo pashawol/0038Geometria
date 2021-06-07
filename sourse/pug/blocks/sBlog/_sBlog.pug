@@ -1,9 +1,34 @@
-mixin sBlog(data)
+mixin blogItem(item)
+	+b.blogItem&attributes(attributes)
+		+e.imgWrap 
+			+pic(item.img,'','')
+		+e.date 22 марта 2021
+		+e.title!= item.title 
+		+e.btn(href="#") Читать
+
+mixin sBlog(h2)
 	// start sBlog
 	+b.SECTION.sBlog.section#sBlog&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sBlog
-				
-			.row
+			if h2
+				h2= h2
+			else
+				+b.section-title.text-center
+					h2 Новости и блог
+			+e.row.row
+				.col-lg-4 
+					+blogItem({
+						img: 'headImg.jpg',
+						title: `Использование современного оборудования`
+					})
+				.col-lg-4 
+					+blogItem({
+						img: 'contentImg.png',
+						title: `Изменение географии доставки`
+					})
+				.col-lg-4 
+					+blogItem({
+						img: 'blogImg.jpg',
+						title: `Пополнение ассортимента новыми моделями`
+					})
 	// end sBlog
