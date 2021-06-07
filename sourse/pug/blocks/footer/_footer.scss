@@ -1,14 +1,21 @@
 .footer {
 	margin-top: auto;
-	// --sPT: ;
-	// --sPB: ;
 	padding-top: var(--sPT);
+	@include media-breakpoint-up(xxl) {
+		padding-top: calc(var(--sPT) * 1.5);
+	}
 	padding-bottom: var(--sPB);
 
 	&__row {
 	}
 	&__logo {
 		text-align: center;
+		display: inline-block;
+		margin-right: rem(150);
+		@include media-breakpoint-up(xxl) {
+			margin-right: rem(200);
+		}
+		margin-top: rem(-25);
 	}
 	&__lCol {
 	}
@@ -17,15 +24,10 @@
 	}
 	&__copyright {
 		max-width: rem(440);
-		margin-bottom: rem(20);
+		margin-bottom: rem(25);
 	}
 	&__polite {
 		color: $secondary;
-	}
-	&__logo {
-		display: inline-block;
-		margin-top: rem(-15);
-		margin-right: rem(20);
 	}
 	&__col {
 		text-align: center;

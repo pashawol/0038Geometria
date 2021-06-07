@@ -2,8 +2,8 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			//- +b.section-title.text-center
-			//- 	h2 Контакты
+			+b.section-title.text-center.d-none.d-xl-block
+				h2 Контакты
 
 			+e.block.text-center
 				+e.txt Вы можете связаться с нами в мессенджерах:
@@ -13,47 +13,48 @@ mixin sContact()
 							+icon('whatsapp')
 							span Whatsapp
 					+e.btn-col.col-auto
-						+e.btn--tg(href='#')
-							+icon('telegram')
-							span Telegram
-					+e.btn-col.col-auto
 						+e.btn--vb(href='#')
 							+icon('viber')
 							span Viber
+					+e.btn-col.col-auto
+						+e.btn--tg(href='#')
+							+icon('telegram')
+							span Telegram
 				+e.txt или позвонить по телефону:
 				+e.tel(href='tel:+7(920)0162999') +7 (920) 016-29-99
 			+b.mapWrap 
 				+e.map#map
-					//- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-					//- script.
-					//- 	ymaps.ready(function () {
-					//- 	var myMap = new ymaps.Map('map', {
-					//- 		center: [56.250197, 43.936412],
-					//- 		zoom: 16
-					//- 			}, {
-					//- 				searchControlProvider: 'yandex#search'
-					//- 			}),
+					<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
-					//- 			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-					//- 				hintContent: 'Собственный значок метки',
-					//- 				balloonContent: 'Это красивая метка'
-					//- 			}, {
-					//- 				// Опции.
-					//- 				// Необходимо указать данный тип макета.
-					//- 				iconLayout: 'default#image',
-					//- 				// Своё изображение иконки метки.
-					//- 				iconImageHref: 'img/svg/mark.svg',
-					//- 				// Размеры метки.
-					//- 				iconImageSize: [400, 400],
-					//- 				// Смещение левого верхнего угла иконки относительно
-					//- 				// её "ножки" (точки привязки).
-					//- 				iconImageOffset: [-200, -200]
-					//- 			});
+					script.
+						ymaps.ready(function () {
+						var myMap = new ymaps.Map('map', {
+							center: [53.425920, 58.993065],
+							zoom: 16
+								}, {
+									searchControlProvider: 'yandex#search'
+								}),
 
-					//- 	myMap.geoObjects
-					//- 		.add(myPlacemark);
-					//- 	});
-				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7d9fde9f456413f4844ab85896c1261da6b7319cac10d4614357de6b73250aa6&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+								myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+									hintContent: 'Собственный значок метки',
+									balloonContent: 'Это красивая метка'
+								}, {
+									// Опции.
+									// Необходимо указать данный тип макета.
+									iconLayout: 'default#image',
+									// Своё изображение иконки метки.
+									iconImageHref: 'img/@2x/mark.png',
+									// Размеры метки.
+									iconImageSize: [400, 400],
+									// Смещение левого верхнего угла иконки относительно
+									// её "ножки" (точки привязки).
+									iconImageOffset: [-200, -200]
+								});
+
+						myMap.geoObjects
+							.add(myPlacemark);
+						});
+				//- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7d9fde9f456413f4844ab85896c1261da6b7319cac10d4614357de6b73250aa6&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
 				+e.mapDescr
 					strong Адрес:
 					p Нижний Новгород, ул. Окская гавань, д. 3

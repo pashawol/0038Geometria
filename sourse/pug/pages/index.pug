@@ -45,10 +45,26 @@ block pagecontent
 	+sStock
 	+sTemplates
 	+sFaq
-	+sBlog
+	+sBlog()
+		+e.row.row
+			.col-lg-4 
+				+blogItem({
+					img: 'headImg.jpg',
+					title: `Использование современного оборудования`
+				})
+			.col-lg-4 
+				+blogItem({
+					img: 'contentImg.png',
+					title: `Изменение географии доставки`
+				})
+			.col-lg-4 
+				+blogItem({
+					img: 'blogImg.jpg',
+					title: `Пополнение ассортимента новыми моделями`
+				})
 	+sContact()
 	+footer()
-      
+
 
 
 

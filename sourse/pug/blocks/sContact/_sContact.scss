@@ -4,20 +4,28 @@
 	// --sPB: ;
 	// --sTPB: ;
 
+	h2,
+	.h2 {
+		@include media-breakpoint-down(xxl) {
+			font-size: rem(38);
+		}
+	}
+
 	&__txt {
-		padding-bottom: rem(20);
+		padding-bottom: rem(33);
 	}
 
 	&__block {
 		background: #f1f2f0;
 		border-radius: 15px 15px 0 0;
-		padding: rem(60) 0;
+		padding: rem(63) rem(34) rem(72);
 	}
 
 	&__tel {
 		text-decoration: none;
 		border-bottom: 4px solid #f8b473;
 		color: $body-color !important;
+		line-height: 1.1;
 		@include rfs(60px);
 		font-weight: bold;
 		&:hover {
@@ -28,8 +36,8 @@
 	&__btns-row {
 		justify-content: center;
 		align-items: center;
-		padding-top: rem(20);
-		padding-bottom: rem(40);
+		padding-top: rem(10);
+		padding-bottom: rem(42);
 
 		@include roww(rem(12));
 		@include media-breakpoint-up(md) {
@@ -42,10 +50,13 @@
 	&__btn {
 		width: 100%;
 		@include media-breakpoint-up(md) {
-			width: rem(224);
+			width: rem(144);
 		}
 		@include media-breakpoint-up(lg) {
-			width: rem(300);
+			width: rem(224);
+		}
+		@include media-breakpoint-up(xxl) {
+			width: rem(260);
 		}
 		border-radius: rem(5);
 		display: inline-flex;
@@ -54,7 +65,7 @@
 
 		font-weight: 600;
 		font-size: rem(20);
-		padding: 18px 12px;
+		padding: 10px 17px;
 		line-height: 1.2;
 
 		color: $white !important;
@@ -96,19 +107,27 @@
 
 	&__mapDescr {
 		@include a-cent1(y);
-		left: 8%;
+		left: 7%;
 		background: #ffffff;
 		box-shadow: 0px 10px 15px rgba(53, 57, 63, 0.15);
 		border-radius: 15px;
-		padding: rem(49) rem(40);
+		padding: rem(50) rem(20) rem(50) rem(40);
+		max-width: 25%;
 
 		strong {
 			color: $secondary;
-			margin-bottom: rem(10);
+			margin-bottom: rem(12);
 			display: block;
 		}
 		p {
 			margin-bottom: rem(20);
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
+	}
+
+	> ymaps {
+		height: rem(425) !important;
 	}
 }

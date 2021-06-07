@@ -20,7 +20,7 @@
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="02.jpg">
+	<body data-bg="02_1024.jpg">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-xl-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -176,52 +176,36 @@
 			<!-- start sBlog-->
 			<section class="sBlog section" id="sBlog">
 				<div class="container">
-					<h2>Похожее из блога</h2>
+					<div class="section-title">
+						<h3>Похожее из блога</h3>
+					</div>
 					<div class="sBlog__row row">
-						<div class="col-lg-4"> 
-							<div class="blogItem">
-								<div class="blogItem__imgWrap"> 
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/headImg.webp"/><img src="img/@2x/headImg.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture-->
-								</div>
-								<div class="blogItem__date">22 марта 2021
-								</div>
-								<div class="blogItem__title">Использование современного оборудования
-								</div><a class="blogItem__btn" href="#">Читать</a>
-							</div>
+						<div class="col-lg-4"> <a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
+							<!-- picture-->
+							<picture> 
+								<source type="image/webp" srcset="img/@2x/webp/headImg.webp"/><img src="img/@2x/headImg.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture--></span><span class="blogItem__date">22 марта 2021</span><span class="blogItem__title">Использование современного оборудования</span>
+							<div><span class="blogItem__btn">Читать</span>
+							</div></a>
 						</div>
-						<div class="col-lg-4"> 
-							<div class="blogItem">
-								<div class="blogItem__imgWrap"> 
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/contentImg.webp"/><img src="img/@2x/contentImg.png" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture-->
-								</div>
-								<div class="blogItem__date">22 марта 2021
-								</div>
-								<div class="blogItem__title">Изменение географии доставки
-								</div><a class="blogItem__btn" href="#">Читать</a>
-							</div>
+						<div class="col-lg-4"> <a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
+							<!-- picture-->
+							<picture> 
+								<source type="image/webp" srcset="img/@2x/webp/contentImg.webp"/><img src="img/@2x/contentImg.png" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture--></span><span class="blogItem__date">22 марта 2021</span><span class="blogItem__title">Изменение географии доставки</span>
+							<div><span class="blogItem__btn">Читать</span>
+							</div></a>
 						</div>
-						<div class="col-lg-4"> 
-							<div class="blogItem">
-								<div class="blogItem__imgWrap"> 
-									<!-- picture-->
-									<picture> 
-										<source type="image/webp" srcset="img/@2x/webp/blogImg.webp"/><img src="img/@2x/blogImg.jpg" alt="" loading="lazy"/>
-									</picture>
-									<!-- /picture-->
-								</div>
-								<div class="blogItem__date">22 марта 2021
-								</div>
-								<div class="blogItem__title">Пополнение ассортимента новыми моделями
-								</div><a class="blogItem__btn" href="#">Читать</a>
-							</div>
+						<div class="col-lg-4"> <a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
+							<!-- picture-->
+							<picture> 
+								<source type="image/webp" srcset="img/@2x/webp/blogImg.webp"/><img src="img/@2x/blogImg.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture--></span><span class="blogItem__date">22 марта 2021</span><span class="blogItem__title">Пополнение ассортимента новыми моделями</span>
+							<div><span class="blogItem__btn">Читать</span>
+							</div></a>
 						</div>
 					</div>
 				</div>
@@ -230,6 +214,9 @@
 			<!-- start sContact-->
 			<section class="sContact section" id="sContact">
 				<div class="container">
+					<div class="section-title text-center d-none d-xl-block">
+						<h2>Контакты</h2>
+					</div>
 					<div class="sContact__block text-center">
 						<div class="sContact__txt">Вы можете связаться с нами в мессенджерах:
 						</div>
@@ -239,23 +226,52 @@
 									<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
 								</svg><span>Whatsapp</span></a>
 							</div>
-							<div class="sContact__btn-col col-auto"><a class="sContact__btn sContact__btn--tg" href="#">
-								<svg class="icon icon-telegram ">
-									<use xlink:href="img/svg/sprite.svg#telegram"></use>
-								</svg><span>Telegram</span></a>
-							</div>
 							<div class="sContact__btn-col col-auto"><a class="sContact__btn sContact__btn--vb" href="#">
 								<svg class="icon icon-viber ">
 									<use xlink:href="img/svg/sprite.svg#viber"></use>
 								</svg><span>Viber</span></a>
+							</div>
+							<div class="sContact__btn-col col-auto"><a class="sContact__btn sContact__btn--tg" href="#">
+								<svg class="icon icon-telegram ">
+									<use xlink:href="img/svg/sprite.svg#telegram"></use>
+								</svg><span>Telegram</span></a>
 							</div>
 						</div>
 						<div class="sContact__txt">или позвонить по телефону:
 						</div><a class="sContact__tel" href="tel:+7(920)0162999">+7 (920) 016-29-99</a>
 					</div>
 					<div class="mapWrap"> 
-						<div class="mapWrap__map" id="map">
-						</div><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7d9fde9f456413f4844ab85896c1261da6b7319cac10d4614357de6b73250aa6&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+						<div class="mapWrap__map" id="map"><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+							<script>
+								ymaps.ready(function () {
+								var myMap = new ymaps.Map('map', {
+									center: [53.425920, 58.993065],
+									zoom: 16
+										}, {
+											searchControlProvider: 'yandex#search'
+										}),
+								
+										myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+											hintContent: 'Собственный значок метки',
+											balloonContent: 'Это красивая метка'
+										}, {
+											// Опции.
+											// Необходимо указать данный тип макета.
+											iconLayout: 'default#image',
+											// Своё изображение иконки метки.
+											iconImageHref: 'img/@2x/mark.png',
+											// Размеры метки.
+											iconImageSize: [400, 400],
+											// Смещение левого верхнего угла иконки относительно
+											// её "ножки" (точки привязки).
+											iconImageOffset: [-200, -200]
+										});
+								
+								myMap.geoObjects
+									.add(myPlacemark);
+								});
+							</script>
+						</div>
 						<div class="mapWrap__mapDescr"><strong>Адрес:</strong>
 							<p>Нижний Новгород, ул. Окская гавань, д. 3</p><strong>Режим работы:</strong>
 							<p>Пн-Пт: 9:00 - 18:00<br> Сб: 9:00 - 14:00<br> Вс: выходной</p>
@@ -268,7 +284,7 @@
 				<div class="container">
 					<div class="footer__row row"> 
 						<div class="footer__lCol col-lg-auto"> 
-							<div class="footer__copyright">&copy;&nbsp;22021. Официальный сайт компании &laquo;Геометрия&raquo;. Все права защищены. Не&nbsp;является публичной офертой.
+							<div class="footer__copyright">&copy;&nbsp;22021. Официальный сайт компании &laquo;Геометрия&raquo;. Все&nbsp;права защищены. Не&nbsp;является публичной офертой.
 							</div><a class="footer__polite" href="#">Политика конфиденциальности</a>
 						</div>
 						<div class="footer__col col"> <a class="footer__logo" href="/"><img src="img/svg/logo-footer.svg" alt="Логотип" loading="lazy"/></a>

@@ -5,10 +5,10 @@
 	position: relative;
 	.container {
 		@include media-breakpoint-up(md) {
-			min-width: 644px;
+			max-width: 644px;
 		}
 		@include media-breakpoint-up(lg) {
-			min-width: 817px;
+			max-width: 837px;
 		}
 		@include media-breakpoint-up(xl) {
 			max-width: 780px;
@@ -58,7 +58,10 @@
 	.h5,
 	.h6 {
 		font-weight: bold;
-		margin-bottom: rem(40);
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(xxl) {
+			margin-bottom: rem(40);
+		}
 	}
 
 	h3,
@@ -81,7 +84,10 @@
 
 	p {
 		line-height: calc(30 / 15);
-		margin-bottom: rem(60);
+		margin-bottom: rem(50);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(60);
+		}
 	}
 
 	ul {

@@ -19,7 +19,9 @@ include ../blocks/sContact/_sContact.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= '02.jpg'
+	//- - let  bg= '02.jpg'
+	//- - let  bg= '02_1280.jpg'
+	- let  bg= '02_1024.jpg'
 
 block title
 	- let  title= 'title'
@@ -34,6 +36,22 @@ block pagecontent
 	+sPageHead()
 	+sContent()
 	+sBlog(`Похожее из блога`)
+		+e.row.row
+			.col-lg-4 
+				+blogItem({
+					img: 'headImg.jpg',
+					title: `Использование современного оборудования`
+				})
+			.col-lg-4 
+				+blogItem({
+					img: 'contentImg.png',
+					title: `Изменение географии доставки`
+				})
+			.col-lg-4 
+				+blogItem({
+					img: 'blogImg.jpg',
+					title: `Пополнение ассортимента новыми моделями`
+				})
 	+sContact()
 	+footer()
 

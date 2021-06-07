@@ -9,7 +9,10 @@
 	.h1 {
 		font-weight: bold;
 		line-height: calc(68 / 48);
-		@extend .h2;
+		font-size: rem(38);
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(48);
+		}
 
 		&::after {
 			display: none !important;
