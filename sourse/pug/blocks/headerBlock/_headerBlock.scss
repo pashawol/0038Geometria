@@ -9,16 +9,33 @@ padding-top: rem(20);
 		border-radius: 15px;
 		overflow: hidden;
 		background: #DFD3C3;
+		z-index: 2;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 30%;
+			height: 100%;
+			left: 20%;
+			top: 0;
+			z-index: -1;
+			background: linear-gradient(90deg, #DFD3C3 0%, rgba(223, 211, 195, 0) 25%);
+		}
 		img{
+			object-fit: cover;
+			position: absolute; 
 			max-width: 70%;
 			position: absolute;
 			left: auto;
 			right: -5%;
 			bottom: -5%;
 			height: 110%;
-
+			z-index: -1;
 		}
 	}
+	
+	&__img-wrap {
+
+		}
 	p{
 		color: #F0811F;
 		font-size: rem(20);
@@ -35,13 +52,9 @@ padding-top: rem(20);
 		padding-left: rem(112);
 		z-index: 2;
 		position: relative;
-		&::before{
-			content: '';
-			position: absolute;
-			width: 120%;
-			height: 100%;
-		}
+		
 	}
+
 	&__btn{
 		@extend .btn;
 		@extend .btn-primary;

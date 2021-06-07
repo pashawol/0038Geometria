@@ -1,5 +1,10 @@
+textarea{
+	height: rem(140);
+}
 .form-wrap{
  	&__input-wrap{
+		 margin-bottom: rem(20);
+		 position: relative;
 			// @extend .form-group;
 			
 		}
@@ -15,6 +20,33 @@
  		width: 100%;
  		display: block;
  	}
+
+	 &__code{
+		 padding-left: rem(20);
+		 position: absolute;
+		 font-weight: bold;
+		 top: $input-padding-y;
+		 pointer-events: none;
+	 }
+	 input[type="tel"]{
+		 padding-left: rem(40);
+	 }
+	 &__polite{
+		 text-align: center;
+		 font-size: 14px;
+		 color: #858F98;
+	 }
+	 &__btn{
+		 margin-top: 20px;
+		 margin-bottom: var(--sp-base);
+		 @extend .btn;
+		 @extend .btn-primary;
+		 width: 100%;
+		 display: block;
+		 margin-left: auto;
+		 margin-right: auto;
+		 max-width: rem(420);
+	 }
 }
 
 

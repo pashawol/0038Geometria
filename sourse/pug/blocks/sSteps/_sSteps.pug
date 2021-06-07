@@ -3,7 +3,23 @@ mixin sSteps(data)
 	+b.SECTION.sSteps.section#sSteps&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sSteps
+				h2 Процесс работы
+			+e.slider--js.swiper-container
+				.swiper-wrapper
 				
-			.row
+					mixin item(i,t)
+						+e.col.col-xl-3.col-lg-4.col-sm-6.col-.swiper-slide
+							+pic(`step-${i}.jpg`,'',0)
+							+e.title= t
+					+item(`1`,`Изготовим конструкции`)
+					+item(`2`,`Привезем`)
+					+item(`3`,`Демонтируем старые`)
+					+item(`4`,`Установим новые`)
+					+item(`5`,`Сделаем откосы и подоконники`)
+					+item(`6`,`Покажем как эксплуатировать`)
+					+item(`7`,`Уберем мусор`)
+				.d-md-none
+					+arrow
+					.swiper-pagination
+			+e.btn(Href="#") Оставить заявку
 	// end sSteps

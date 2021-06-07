@@ -8,8 +8,8 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js.on
+	+b.menu-mobile--js.d-xl-none
+		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 		
@@ -18,7 +18,7 @@ mixin mob-mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.d-none.d-xl-block
 		.container
 			.row
 				.col-auto.d-lg-none

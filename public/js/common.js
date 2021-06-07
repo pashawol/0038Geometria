@@ -137,8 +137,8 @@ const JSCCommon = {
 	inputMask() {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
-		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask("+9(999)999-99-99").mask(InputTel);
+		InputTel.forEach(element => element.setAttribute("pattern", "[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
+		Inputmask("(999)999-99-99").mask(InputTel);
 	},
 
 	// /inputMask
@@ -254,9 +254,79 @@ function eventHandler() {
 	})); // modal window
 
 	const swiper3 = new Swiper('.slider-3-js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 3,
-		spaceBetween: 20
+		slidesPerView: 1,
+		spaceBetween: 20,
+		breakpoints: {
+			992: {
+				slidesPerView: 2
+			},
+			// when window width is >= 640px
+			1200: {
+				slidesPerView: 3
+			}
+		}
+	}));
+	const swiperStep = new Swiper('.sSteps__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		loop: false,
+		breakpoints: {
+			768: {
+				slidesPerView: 'auto',
+				spaceBetween: 0
+			}
+		}
 	})); // modal window
+
+	function getTimeRemaining(endtime) {
+		const total = Date.parse(endtime) - Date.parse(new Date());
+		const seconds = Math.floor(total / 1000 % 60);
+		const minutes = Math.floor(total / 1000 / 60 % 60);
+		const hours = Math.floor(total / (1000 * 60 * 60) % 24);
+		const days = Math.floor(total / (1000 * 60 * 60 * 24));
+		return {
+			total,
+			days,
+			hours,
+			minutes,
+			seconds
+		};
+	}
+
+	const clock = document.querySelector('.timer-block--js');
+
+	if (clock) {
+		function initializeClock(endtime) {
+			const daysSpan = clock.querySelector('.days');
+			const hoursSpan = clock.querySelector('.hours');
+			const minutesSpan = clock.querySelector('.minutes'); // const secondsSpan = clock.querySelector('.seconds');
+
+			function updateClock() {
+				const t = getTimeRemaining(endtime);
+				daysSpan.innerHTML = t.days;
+				hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+				minutesSpan.innerHTML = ('0' + t.minutes).slice(-2); // secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+				if (t.total <= 0) {
+					clearInterval(timeinterval);
+				}
+			}
+
+			updateClock();
+			const timeinterval = setInterval(updateClock, 1000);
+		} // const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+
+
+		const deadline = new Date(Date.parse(clock.dataset.date));
+		console.log(deadline);
+		initializeClock(deadline);
+	}
+
+	$(".accordion-item__head").click(function () {
+		$(this).next().slideToggle(function () {
+			$(this).parent().toggleClass("active");
+		});
+	});
 }
 
 ;
