@@ -12,9 +12,13 @@
 			border: 4px solid #F0811F;
 			box-sizing: border-box;
 			border-radius: 15px;
-			@include media-breakpoint-up(xl) {
+			@include media-breakpoint-up(xxl) {
 
 				padding: rem(60) rem(110) rem(42);
+			}
+			@include media-breakpoint-up(xl) {
+
+				padding: rem(40) rem(80) rem(42);
 			}
 			padding: rem(40) rem(40) rem(40);
 		}

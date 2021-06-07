@@ -1,6 +1,6 @@
 .menu{
 	list-style: none;
-		@include media-breakpoint-up(xxl){
+		@include media-breakpoint-up(xl){
 
 			display: flex;
 			@include roww(20px);

@@ -82,7 +82,10 @@
 
 	&__row{
 		text-align: center;
+		@include media-breakpoint-up(lg) {
 		justify-content: space-between;
+		}
+		justify-content: center;
 		img{
 			margin-bottom: rem(20);
 		}
@@ -95,8 +98,10 @@
 		margin-bottom: rem(70);
 	}
 	&__col-other{
-		max-width: rem(240);
-		margin-bottom: rem(-38);
+		@include media-breakpoint-up(xl) {
+			max-width: rem(240);
+			margin-bottom: rem(-38);
+		}
 		p{
 			margin-bottom: rem(40);
 		}

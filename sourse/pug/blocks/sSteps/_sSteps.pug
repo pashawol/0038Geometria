@@ -8,7 +8,7 @@ mixin sSteps(data)
 				.swiper-wrapper
 				
 					mixin item(i,t)
-						+e.col.col-xl-3.col-lg-4.col-sm-6.col-.swiper-slide
+						+e.col.col-xl-3.col-lg-4.col-sm-6.swiper-slide
 							+pic(`step-${i}.jpg`,'',0)
 							+e.title= t
 					+item(`1`,`Изготовим конструкции`)
@@ -21,5 +21,5 @@ mixin sSteps(data)
 				.d-md-none
 					+arrow
 					.swiper-pagination
-			+e.btn(Href="#") Оставить заявку
+			+e.btn(href="#modal-call").link-modal-js  Оставить заявку
 	// end sSteps

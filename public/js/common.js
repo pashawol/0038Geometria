@@ -239,33 +239,50 @@ function eventHandler() {
 		pagination: {
 			el: ' .swiper-pagination',
 			type: 'bullets',
-			clickable: true // renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-
+			clickable: true
 		}
 	};
 	const swiperAll = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 1
 	}));
-	const swiper4 = new Swiper('.slider-js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 1,
-		spaceBetween: 20
-	})); // modal window
-
-	const swiper3 = new Swiper('.slider-3-js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 1,
-		spaceBetween: 20,
-		breakpoints: {
-			992: {
-				slidesPerView: 2
+	let sliderWrapper = document.querySelectorAll('.slider-wrap');
+	sliderWrapper.forEach(el => {
+		const swiperAll = new Swiper(el.querySelector('.slider-js'), _objectSpread(_objectSpread({}, defaultSl), {}, {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			navigation: {
+				nextEl: el.querySelector('.swiper-button-next'),
+				prevEl: el.querySelector('.swiper-button-prev')
 			},
-			// when window width is >= 640px
-			1200: {
-				slidesPerView: 3
+			pagination: {
+				el: el.querySelector(' .swiper-pagination'),
+				type: 'bullets',
+				clickable: true
 			}
-		}
-	}));
+		}));
+		const swiperAll2 = new Swiper(el.querySelector('.slider-3-js'), _objectSpread(_objectSpread({}, defaultSl), {}, {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			breakpoints: {
+				992: {
+					slidesPerView: 2
+				},
+				// when window width is >= 640px
+				1200: {
+					slidesPerView: 3
+				}
+			},
+			navigation: {
+				nextEl: el.querySelector('.swiper-button-next'),
+				prevEl: el.querySelector('.swiper-button-prev')
+			},
+			pagination: {
+				el: el.querySelector(' .swiper-pagination'),
+				type: 'bullets',
+				clickable: true
+			}
+		}));
+	});
 	const swiperStep = new Swiper('.sSteps__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 1,
 		spaceBetween: 20,
@@ -325,6 +342,16 @@ function eventHandler() {
 	$(".accordion-item__head").click(function () {
 		$(this).next().slideToggle(function () {
 			$(this).parent().toggleClass("active");
+		});
+	});
+	$(".sCalc__btn--next").click(function () {
+		$(this).parents(".sCalc__step-item").hide().removeClass('active').next().fadeIn(function () {
+			$(this).addClass('active');
+		});
+	});
+	$(".sCalc__btn--prev").click(function () {
+		$(this).parents(".sCalc__step-item").hide().removeClass('active').prev().fadeIn(function () {
+			$(this).addClass('active');
 		});
 	});
 }

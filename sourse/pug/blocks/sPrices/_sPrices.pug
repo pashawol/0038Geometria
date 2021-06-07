@@ -17,7 +17,7 @@ mixin sPrices(data)
 										+e.item
 											+e.head
 												+e.title.d-none.d-xl-block!= t
-												+pic(`prod-${i}.jpg`,'','') 
+												+pic(`prod-${i}.png`,'','') 
 											+e.body
 												+e.title.d-block.d-xl-none!= t
 												+in-c("radio",'',`radio-${i}`)(checked)
@@ -31,14 +31,14 @@ mixin sPrices(data)
 													span / под ключ
 														+e.tooltip ?
 															+e.tooltip-text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, ipsum. 
-												+e.btn.btn-outline-primary(href="#") Уточнить цену
+												+e.btn.btn-outline-primary(href="#modal-call").link-modal-js Уточнить цену
 								+item(`Двухстворчатое окно с одной створкой глухой, другой поворотной VEKA Softline`,1)
 								+item('Трехстворчатое окно с центральной поворотной створкой VEKA Softline',2)
 								+item('Балконный блок с поворотной дверью VEKA Softline',3)
 					+tab.active
 					+tab
 					.text-center
-						+e.btn.btn-primary(href="#") 
+						+e.btn.btn-primary(href="#sCalc")
 							+icon('calculator')
 							| Рассчитать цену в калькуляторе
 						

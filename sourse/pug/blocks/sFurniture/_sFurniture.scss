@@ -53,7 +53,7 @@
 			height: em(40);
 			border-radius: 50%;
 			margin-right: em(20);
-			background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23E5E5E5'/%3E%3Cpath d='M26.4628 12.7199L17.8653 23.0363L13.4136 18.5855C12.6336 17.8046 11.3657 17.8046 10.5857 18.5855C9.80476 19.3665 9.80476 20.6324 10.5857 21.4134L16.5854 27.413C16.9623 27.789 17.4713 27.999 18.0003 27.999C18.0303 27.999 18.0613 27.999 18.0913 27.997C18.6523 27.972 19.1772 27.711 19.5372 27.279L29.5366 15.2797C30.2436 14.4308 30.1286 13.1708 29.2806 12.4629C28.4317 11.7569 27.1698 11.8709 26.4628 12.7199Z' fill='%23F0811F'/%3E%3C/svg%3E%0A");
+			background-image: var(--marker);
 			background-repeat: no-repeat;
 			background-size: 100%;
 			position: absolute;
@@ -68,5 +68,7 @@
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(xl) {
+		--sPB:0;
+	}
 } // end.sFurniture
