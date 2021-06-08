@@ -168,9 +168,31 @@
 .clock-icon{
 	circle,
 	[fill="#F0811F"] {
-		animation: blink-1 4s infinite both;
+		animation: blink-2 3s infinite ;
+		position: relative;
 		transform-origin: center;
+	z-index: 10;
+		&:nth-child(1) {
+			transform: translateY(-500%);
+		}
+		&:nth-child(2) {
+			animation-delay: 1150ms;
+		}
 		
+		&:nth-child(3) {
+			transform: translateY(-100%);
+			animation-delay: 500ms;
+		}
+		&:nth-child(4) {
+			animation-delay: 950ms;
+			top: 70px;
+		}
+		&:nth-child(5) {
+			transform: translateY(-300%);
+			animation-delay: 600ms;
+			top: 70px;
+		}
+
 	}
 }
 
@@ -190,16 +212,18 @@
 }
 @keyframes blink-2 {
 
-	0%,
-	50%,
-	100% {
-		opacity: 1;
-		transform: scale(1);
+	0% {
+		opacity: 0;
+		transform: translateY(-10%);
 	}
 	
-	25%,
-	75% {
+	90% {
+		opacity: 1;
+		transform: translateY(19%);
+	}
+	100%{
+		transform: translateY(19%);
+		// transform: translateY(20%);
 		opacity: 0;
-		transform: scale(0);
 	}
 }

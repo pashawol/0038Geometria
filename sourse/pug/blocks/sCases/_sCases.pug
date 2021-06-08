@@ -5,33 +5,34 @@ mixin sCases(data)
 			+b.section-title.text-center
 				h2 Выполненные работы
 		+slider()
-			+e.slide.swiper-slide
-				+e.item
-					.row.g-0
-						.col-lg-auto
-							+pic('case.jpg','bg',0)
-						.col 
-							+e.caption
-								h3 Установка балконной двери в квартире
-								table
-									tr
-										th Пакет услуг:
-										td Под ключ
-									tr
-										th Адрес:
-										td г. Нижний Новогород, ул. Ленина, д. 2
-									tr
-										th Материалы:
-										td Deceuninck Eco 60, фурнитура: Vorne, стеклопакет(ы): 32 мм, двухкамерный (4-10-4-10-4)
-								+e.footer
-									.row 
-										.col 
-											.strong.text-primary Стоимость:
-											.h3.strong 60 000 руб
-										.col 
-											.strong.text-primary Конструкций:
-											.h3.strong 1 шт.
-										.col 
-											.strong.text-primary Дата:
-											.h3.strong 20.05.2021
+			- for (var x = 0; x < 3; x++)
+				+e.slide.swiper-slide
+					+e.item
+						.row.g-0
+							.col-lg-auto
+								+pic('case.jpg','bg',0)
+							.col 
+								+e.caption
+									h3 Установка балконной двери в квартире
+									table
+										tr
+											th Пакет услуг:
+											td Под ключ
+										tr
+											th Адрес:
+											td г. Нижний Новогород, ул. Ленина, д. 2
+										tr
+											th Материалы:
+											td Deceuninck Eco 60, фурнитура: Vorne, стеклопакет(ы): 32 мм, двухкамерный (4-10-4-10-4)
+									+e.footer
+										.row 
+											.col 
+												.strong.text-primary Стоимость:
+												.h3.strong 60 000 руб
+											.col 
+												.strong.text-primary Конструкций:
+												.h3.strong 1 шт.
+											.col 
+												.strong.text-primary Дата:
+												.h3.strong 20.05.2021
 	// end sCases

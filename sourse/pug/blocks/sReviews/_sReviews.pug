@@ -4,7 +4,7 @@ mixin sReviews(data)
 		.container
 			+b.section-title.text-center
 				h2 Отзывы клиентов
-		+slider3()
+		+slider3()(data-timer="5000")
 			mixin slide(i,t,p)
 				+e.slide.swiper-slide
 					+e.item

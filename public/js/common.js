@@ -247,12 +247,31 @@ function eventHandler() {
 	}));
 	let sliderWrapper = document.querySelectorAll('.slider-wrap');
 	sliderWrapper.forEach(el => {
+		let prev = el.querySelector('.swiper-button-prev');
+		let next = el.querySelector('.swiper-button-next');
+		el.addEventListener("mouseover", event => {
+			let prev = event.target.closest('.swiper-button-prev');
+			let next = event.target.closest('.swiper-button-next');
+
+			if (prev) {
+				el.querySelector(".swiper-slide-prev").classList.add("hover");
+			} else {
+				el.querySelector(".swiper-slide-prev").classList.remove("hover");
+			}
+
+			if (next) {
+				el.querySelector(".swiper-slide-next").classList.add("hover");
+			} else {
+				el.querySelector(".swiper-slide-next").classList.remove("hover");
+			}
+		});
 		const swiperAll = new Swiper(el.querySelector('.slider-js'), _objectSpread(_objectSpread({}, defaultSl), {}, {
 			slidesPerView: 1,
 			spaceBetween: 20,
+			slideToClickedSlide: true,
 			navigation: {
-				nextEl: el.querySelector('.swiper-button-next'),
-				prevEl: el.querySelector('.swiper-button-prev')
+				nextEl: next,
+				prevEl: prev
 			},
 			pagination: {
 				el: el.querySelector(' .swiper-pagination'),
@@ -263,6 +282,10 @@ function eventHandler() {
 		const swiperAll2 = new Swiper(el.querySelector('.slider-3-js'), _objectSpread(_objectSpread({}, defaultSl), {}, {
 			slidesPerView: 1,
 			spaceBetween: 20,
+			autoplay: {
+				delay: el.dataset.timer || 10000000,
+				pauseOnMouseEnter: true
+			},
 			breakpoints: {
 				768: {
 					slidesPerView: 2
