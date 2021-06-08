@@ -65,7 +65,7 @@
 								<div class="d-md-none"><a class="topLine__soc-link" href="#"><img src="img/svg/viber.svg" alt=""/></a><a class="topLine__soc-link" href="#"><img src="img/svg/whatsapp.svg" alt=""/></a><a class="topLine__soc-link" href="#"><img src="img/svg/telegram.svg" alt=""/></a>
 								</div>
 							</div>
-							<div class="col-auto d-none d-lg-block"><a class="topLine__btn" href="#"> 
+							<div class="col-auto d-none d-lg-block"><a class="topLine__btn" href="#sCalc"> 
 								<svg class="icon icon-calculator ">
 									<use xlink:href="img/svg/sprite.svg#calculator"></use>
 								</svg>Калькулятор цен</a>
@@ -179,6 +179,8 @@
 					<div class="section-title">
 						<h3>Похожее из блога</h3>
 					</div>
+				</div>
+				<div class="container">
 					<div class="sBlog__row row">
 						<div class="col-md-6 col-lg-4"> <a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
 							<!-- picture-->
@@ -245,13 +247,13 @@
 							<script>
 								ymaps.ready(function () {
 								var myMap = new ymaps.Map('map', {
-									center: [56.250197, 43.936412],
-									zoom: 16
+									center: [56.250197, 43.93],
+									zoom: 14
 										}, {
 											searchControlProvider: 'yandex#search'
 										}),
 								
-										myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+										myPlacemark = new ymaps.Placemark([56.250197, 43.936412], {
 											hintContent: 'Собственный значок метки',
 											balloonContent: 'Это красивая метка'
 										}, {
@@ -289,7 +291,7 @@
 							<div class="footer__copyright">&copy;&nbsp;22021. Официальный сайт компании &laquo;Геометрия&raquo;. Все&nbsp;права защищены. Не&nbsp;является публичной офертой.
 							</div><a class="footer__polite" href="#">Политика конфиденциальности</a>
 						</div>
-						<div class="footer__rCol col-xl-auto"><a class="footer__toTop" href="#header">Наверх<img src="img/svg/toTop.svg" alt=""/></a>
+						<div class="footer__rCol col-xl-auto"><a class="footer__toTop" href="#">Наверх<img src="img/svg/toTop.svg" alt=""/></a>
 							<div class="footer__dev"><span>Разработка сайта –&nbsp;</span><a href="#" target="_blank">AD HEADS</a>
 							</div>
 						</div>

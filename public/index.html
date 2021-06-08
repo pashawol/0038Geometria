@@ -65,7 +65,7 @@
 								<div class="d-md-none"><a class="topLine__soc-link" href="#"><img src="img/svg/viber.svg" alt=""/></a><a class="topLine__soc-link" href="#"><img src="img/svg/whatsapp.svg" alt=""/></a><a class="topLine__soc-link" href="#"><img src="img/svg/telegram.svg" alt=""/></a>
 								</div>
 							</div>
-							<div class="col-auto d-none d-lg-block"><a class="topLine__btn" href="#"> 
+							<div class="col-auto d-none d-lg-block"><a class="topLine__btn" href="#sCalc"> 
 								<svg class="icon icon-calculator ">
 									<use xlink:href="img/svg/sprite.svg#calculator"></use>
 								</svg>Калькулятор цен</a>
@@ -1418,53 +1418,53 @@
 					<div class="section-title text-center">
 						<h2>Новости и блог</h2>
 					</div>
-					<div class="slider-wrap">
-						<div class="control-wrap">
-							<div class="container">
-								<div class="sBlog__slider slider-3-js swiper-container"> 
-									<div class="swiper-wrapper"> 
-										<div class="swiper-slide"><a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/headImg.webp"/><img src="img/@2x/headImg.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture--></span><span class="blogItem__date">22 марта 2021</span><span class="blogItem__title">Использование современного оборудования</span>
-											<div><span class="blogItem__btn">Читать</span>
-											</div></a>
-										</div>
-										<div class="swiper-slide"><a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/contentImg.webp"/><img src="img/@2x/contentImg.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture--></span><span class="blogItem__date">22 марта 2021</span><span class="blogItem__title">Изменение географии доставки</span>
-											<div><span class="blogItem__btn">Читать</span>
-											</div></a>
-										</div>
-										<div class="swiper-slide"><a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/blogImg.webp"/><img src="img/@2x/blogImg.jpg" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture--></span><span class="blogItem__date">22 марта 2021</span><span class="blogItem__title">Пополнение ассортимента новыми моделями</span>
-											<div><span class="blogItem__btn">Читать</span>
-											</div></a>
-										</div>
+				</div>
+				<div class="slider-wrap">
+					<div class="control-wrap">
+						<div class="container">
+							<div class="sBlog__slider slider-3-js swiper-container"> 
+								<div class="swiper-wrapper"> 
+									<div class="swiper-slide"><a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/headImg.webp"/><img src="img/@2x/headImg.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></span><span class="blogItem__date">22 марта 2021</span><span class="blogItem__title">Использование современного оборудования</span>
+										<div><span class="blogItem__btn">Читать</span>
+										</div></a>
+									</div>
+									<div class="swiper-slide"><a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/contentImg.webp"/><img src="img/@2x/contentImg.png" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></span><span class="blogItem__date">22 марта 2021</span><span class="blogItem__title">Изменение географии доставки</span>
+										<div><span class="blogItem__btn">Читать</span>
+										</div></a>
+									</div>
+									<div class="swiper-slide"><a class="blogItem" href="#"><span class="blogItem__imgWrap"> 
+										<!-- picture-->
+										<picture> 
+											<source type="image/webp" srcset="img/@2x/webp/blogImg.webp"/><img src="img/@2x/blogImg.jpg" alt="" loading="lazy"/>
+										</picture>
+										<!-- /picture--></span><span class="blogItem__date">22 марта 2021</span><span class="blogItem__title">Пополнение ассортимента новыми моделями</span>
+										<div><span class="blogItem__btn">Читать</span>
+										</div></a>
 									</div>
 								</div>
 							</div>
-							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-								<svg class="icon icon-chevron-left ">
-									<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-								</svg>
-							</div>
-							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-								<svg class="icon icon-chevron-right ">
-									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-								</svg>
-							</div>
-							<div class="swiper-pagination"></div>
 						</div>
+						<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+							<svg class="icon icon-chevron-left ">
+								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+							</svg>
+						</div>
+						<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</div>
+						<div class="swiper-pagination"></div>
 					</div>
 				</div>
 			</section>
@@ -1503,13 +1503,13 @@
 							<script>
 								ymaps.ready(function () {
 								var myMap = new ymaps.Map('map', {
-									center: [56.250197, 43.936412],
-									zoom: 16
+									center: [56.250197, 43.93],
+									zoom: 14
 										}, {
 											searchControlProvider: 'yandex#search'
 										}),
 								
-										myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+										myPlacemark = new ymaps.Placemark([56.250197, 43.936412], {
 											hintContent: 'Собственный значок метки',
 											balloonContent: 'Это красивая метка'
 										}, {
@@ -1547,7 +1547,7 @@
 							<div class="footer__copyright">&copy;&nbsp;22021. Официальный сайт компании &laquo;Геометрия&raquo;. Все&nbsp;права защищены. Не&nbsp;является публичной офертой.
 							</div><a class="footer__polite" href="#">Политика конфиденциальности</a>
 						</div>
-						<div class="footer__rCol col-xl-auto"><a class="footer__toTop" href="#header">Наверх<img src="img/svg/toTop.svg" alt=""/></a>
+						<div class="footer__rCol col-xl-auto"><a class="footer__toTop" href="#">Наверх<img src="img/svg/toTop.svg" alt=""/></a>
 							<div class="footer__dev"><span>Разработка сайта –&nbsp;</span><a href="#" target="_blank">AD HEADS</a>
 							</div>
 						</div>

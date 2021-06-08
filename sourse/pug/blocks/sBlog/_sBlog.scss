@@ -1,7 +1,11 @@
 // start .sBlog
 .sBlog {
 	// --sPT: ;
-	// --sPB: ;
+		@include media-breakpoint-up(sm){
+
+
+			--sPB:0 ;
+		}
 	// --sTPB: ;
 
 	@include media-breakpoint-up(xxl) {
@@ -24,7 +28,25 @@
 			padding-top: rem(20);
 		}
 	}
+	.swiper-container{
+		overflow: hidden;
+	}
+	.swiper-button-hand{
+		@include media-breakpoint-up(xl){
+			top: rem(140);
+		}
+		
+		@include media-breakpoint-up(md){
+			top: rem(172);
+		}
+		@include media-breakpoint-up(sm){
+			top: rem(135);
+		}
 
+		transform: translateY(-50%);
+		bottom: auto;
+		margin: 0;
+	}
 	@include media-breakpoint-up(sm) {
 	}
 	@include media-breakpoint-between(md, xl) {
@@ -33,20 +55,24 @@
 	}
 	@include media-breakpoint-down(xl) {
 	}
+	.swiper-pagination{
+		margin-top: 0;
+	}
 } // end.sBlog
 
 .blogItem {
 	display: flex;
 	flex-direction: column;
+	padding-bottom: 30px;
 	&__imgWrap {
 		padding-bottom: rem(20);
 		picture {
 			@include block(540, 280);
 			@include media-breakpoint-up(md) {
-				@include block(348, 280);
+				// @include block(378, 280);
 			}
 			@include media-breakpoint-up(lg) {
-				@include block(304, 280);
+				@include block(374, 280);
 			}
 			@include media-breakpoint-up(xl) {
 				@include block(380, 280);

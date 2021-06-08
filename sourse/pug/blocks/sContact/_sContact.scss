@@ -55,8 +55,8 @@
 	}
 	&__btn {
 		width: 100%;
+		width: rem(144);
 		@include media-breakpoint-up(md) {
-			width: rem(144);
 		}
 		@include media-breakpoint-up(lg) {
 			width: rem(224);
@@ -64,6 +64,7 @@
 		@include media-breakpoint-up(xxl) {
 			width: rem(260);
 		}
+		// flex-grow: 1;
 		border-radius: rem(5);
 		display: inline-flex;
 		align-items: center;

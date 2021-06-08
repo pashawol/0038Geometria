@@ -29,13 +29,13 @@ mixin sContact()
 					script.
 						ymaps.ready(function () {
 						var myMap = new ymaps.Map('map', {
-							center: [56.250197, 43.936412],
-							zoom: 16
+							center: [56.250197, 43.93],
+							zoom: 14
 								}, {
 									searchControlProvider: 'yandex#search'
 								}),
 
-								myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+								myPlacemark = new ymaps.Placemark([56.250197, 43.936412], {
 									hintContent: 'Собственный значок метки',
 									balloonContent: 'Это красивая метка'
 								}, {

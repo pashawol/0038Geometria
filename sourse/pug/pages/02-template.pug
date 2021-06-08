@@ -37,22 +37,23 @@ block pagecontent
 	+sPageHead()
 	+sContent()
 	+sBlog(`Похожее из блога`)
-		+e.row.row
-			.col-md-6.col-lg-4 
-				+blogItem({
-					img: 'headImg.jpg',
-					title: `Использование современного оборудования`
-				})
-			.col-6.col-lg-4.d-none.d-md-block 
-				+blogItem({
-					img: 'contentImg.png',
-					title: `Изменение географии доставки`
-				})
-			.col-6.col-lg-4.d-none.d-lg-block
-				+blogItem({
-					img: 'blogImg.jpg',
-					title: `Пополнение ассортимента новыми моделями`
-				})
+		.container
+			+e.row.row
+				.col-md-6.col-lg-4 
+					+blogItem({
+						img: 'headImg.jpg',
+						title: `Использование современного оборудования`
+					})
+				.col-6.col-lg-4.d-none.d-md-block 
+					+blogItem({
+						img: 'contentImg.png',
+						title: `Изменение географии доставки`
+					})
+				.col-6.col-lg-4.d-none.d-lg-block
+					+blogItem({
+						img: 'blogImg.jpg',
+						title: `Пополнение ассортимента новыми моделями`
+					})
 	+sContact()
 	+footer()
 

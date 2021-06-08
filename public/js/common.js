@@ -171,7 +171,7 @@ const JSCCommon = {
 			const destination = $(elementClick).offset().top;
 			$('html, body').animate({
 				scrollTop: destination
-			}, 1100);
+			}, 0);
 			return false;
 		});
 	},
@@ -353,6 +353,12 @@ function eventHandler() {
 		$(this).parents(".sCalc__step-item").hide().removeClass('active').prev().fadeIn(function () {
 			$(this).addClass('active');
 		});
+	});
+	$(".footer__toTop").click(function (e) {
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: 0
+		}, 0);
 	});
 }
 

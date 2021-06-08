@@ -159,7 +159,7 @@ const JSCCommon = {
 			const elementClick = $(this).attr("href");
 			const destination = $(elementClick).offset().top;
 
-			$('html, body').animate({ scrollTop: destination }, 1100);
+			$('html, body').animate({ scrollTop: destination },  0);
 
 			return false;
 		});
@@ -367,6 +367,11 @@ function eventHandler() {
 		})
 	})
 	
+
+	$(".footer__toTop").click(function(e){
+		e.preventDefault(); 
+		$('html, body').animate({ scrollTop: 0 }, 0);
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
