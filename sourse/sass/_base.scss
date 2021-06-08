@@ -149,7 +149,10 @@ body {
 	}
 	p {
 		line-height: 200%;
-		margin-bottom: rem(40);
+			@include media-breakpoint-up(xxl) {
+				margin-bottom: rem(40);
+			}
+			margin-bottom: rem(10);
 	}
 }
 
@@ -370,7 +373,10 @@ ul {
 .swiper-pagination {
 	width: 100%;
 	text-align: center;
-	margin-top: rem(35);
+	@include media-breakpoint-up(xxl) {
+		margin-top: rem(35);
+	}
+	margin-top: rem(20);
 	&-bullet {
 		opacity: 1;
 		width: 12px;
@@ -602,7 +608,9 @@ iframe {
 		padding: 1.2rem rem(20);
 	}
 }
-
+.form-check-input[type="radio"]:checked{
+	border-color: $primary;
+}
 .form-check-input:checked[type="radio"] {
 	background-color: #fff;
 }
@@ -663,6 +671,11 @@ h3 {
 .btn,
 .form-control,
 .form-select {
+	&:focus{
+		box-shadow: 0 0 1px 1px $primary;
+	}
+}
+.btn {
 	&:active,
 	&:focus {
 		box-shadow: none !important;
@@ -679,4 +692,8 @@ h3 {
 
 .ya-share2__icon{
 	background-repeat: no-repeat;
+}
+
+.slider-3-js{
+	overflow: hidden;
 }

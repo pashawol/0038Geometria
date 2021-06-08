@@ -16,15 +16,16 @@ mixin sServises(data)
 				+item(`Пластиковые окна`,`1`)
 				+item(`Пластиковые двери`,`2`)
 				+item(`Остекленение балконов`,`3`)
-			h3 Дополнительные услуги
-			+e.row.row
-				mixin item(i,p)
-					+e.col-other.col-lg.col-4
-						img(src=`img/svg/other-servises-${i}.svg` loading="lazy", alt="")
-						p!= p
-				+item(`1`,`Монтаж/демонтаж окон и&nbsp;дверей`)
-				+item(`2`,`Установка подоконников отливов и&nbsp;откосов`)
-				+item(`3`,`Ремонт окон и&nbsp;дверей`)
-				+item(`4`,`Проверка тепловизором`)
-				+item(`5`,`Визуализация будущих окон`)
+			.text-center
+				h3 Дополнительные услуги
+				+e.row.row
+					mixin item(i,p)
+						+e.col-other.col-lg.col-4
+							img(src=`img/svg/other-servises-${i}.svg` loading="lazy", alt="")
+							p!= p
+					+item(`1`,`Монтаж/демонтаж окон и&nbsp;дверей`)
+					+item(`2`,`Установка подоконников отливов и&nbsp;откосов`)
+					+item(`3`,`Ремонт окон и&nbsp;дверей`)
+					+item(`4`,`Проверка тепловизором`)
+					+item(`5`,`Визуализация будущих окон`)
 	// end sServises

@@ -11,15 +11,19 @@ mixin sPrices(data)
 				.tabs__wrap
 					mixin tab()
 						.tabs__content&attributes(attributes)
-							.row
+							form.row
+								
 								mixin item(t,i)
 									+e.col.col-xl-4
 										+e.item
 											+e.head
 												+e.title.d-none.d-xl-block!= t
-												+pic(`prod-${i}.png`,'','') 
+												picture
+													img(src=`img/svg/prod-${i}.svg`, alt="")
+												//- +pic(`prod-${i}.png`,'','') 
 											+e.body
 												+e.title.d-block.d-xl-none!= t
+												
 												+in-c("radio",'',`radio-${i}`)(checked)
 													strong 14 900 руб
 													span / окно

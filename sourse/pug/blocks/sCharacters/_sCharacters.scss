@@ -33,12 +33,13 @@
 				width: rem(240);
 				margin-right: var(--sp);
 			}
-			margin-bottom: 40px;
 			@include media-breakpoint-up(xxl){
-
+				
 				width: rem(240 + 30);
 			}
+			margin-bottom: 30px;
 			@include media-breakpoint-up(xl){
+				margin-bottom: 20px;
 
 				width: rem(240 + 50);
 			}
@@ -46,10 +47,14 @@
 	}
 	h3{
 		font-weight: bold;
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-up(xxl){
 			margin-bottom: rem(45);
 		}
-		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg) {
+
+			margin-bottom: rem(30);
+		}
+		margin-bottom: rem(20);
 	}
 	p{
 		line-height: 200%;
@@ -63,7 +68,15 @@
 			}
 			text-align: center;
 		p{
-			margin-bottom: rem(40);
+			@include media-breakpoint-up(xxl){
+
+				margin-bottom: rem(40);
+			}
+			@include media-breakpoint-up(xl){
+
+				margin-bottom: rem(20);
+			}
+			margin-bottom: rem(10);
 
 		}
 	}

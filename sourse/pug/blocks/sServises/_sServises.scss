@@ -1,6 +1,9 @@
 // start .sServises
 .sServises {
-		// --sPT: ;
+	@include media-breakpoint-down(lg){
+		// --sTPB: ;
+		--sPB: 0;
+	}
 	 
 		// --sTPB: ;
 	&__item{
@@ -95,7 +98,10 @@
 		@include media-breakpoint-up(lg) {
 			text-align: center;
 		}
+		@include media-breakpoint-up(xxl) {
 		margin-bottom: rem(70);
+	}
+	margin-bottom: rem(50);
 	}
 	&__col-other{
 		@include media-breakpoint-up(xl) {

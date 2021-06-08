@@ -12,14 +12,36 @@
 			min-height: calc(100% - var(--bs-gutter-x));
 			margin-bottom: var(--bs-gutter-x);
 			text-align: center;
+			@include media-breakpoint-up(xxl) {
+				min-height: 308px;
+			}
+			// @include media-breakpoint-up(xl) {
+			// 	min-height: 308px;
+			// }
+			
+			// @include media-breakpoint-up(lg) {
+			// 	min-height: 300px;
+			// }
+			@include media-breakpoint-up(md) {
+				min-height: 310px;
+			}
+			min-height: 520px;
+
+			@include media-breakpoint-down(md) {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
 			@include media-breakpoint-up(md) {
 				text-align: left;
 
 				display: flex;
 				align-items: center;
 			}
-			@include media-breakpoint-up(lg) {
+			@include media-breakpoint-up(md) {
 				padding: rem(28) rem(30);
+				
 			}
 			padding: rem(58) rem(30);
 			h3{

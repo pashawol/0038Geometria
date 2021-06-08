@@ -9,6 +9,7 @@ $h: 2px;
 	font-size: 32px;
 	width: 50px;
 	border-radius: 50%;
+	cursor: pointer;
 	&:not(.on){
 		background: #F1F2F0;
 	}
@@ -122,8 +123,8 @@ $h: 2px;
 		position: absolute;
 		opacity: 0;
 		// left: 0;
-		right: 20px; 
-		top: 0px;
+		right: 40px; 
+		top: 20px;
 		z-index: 9999;
 		background-color: transparent;
 		// padding-top: 60px;
@@ -131,6 +132,7 @@ $h: 2px;
 		span,
 		span:after,
 		span:before { 
+			width: 50px;
 		}
 
 		&.on {

@@ -36,11 +36,14 @@
 			top: rem(140);
 		}
 		
+		@include media-breakpoint-down(md){
+			display: none;
+		}
 		@include media-breakpoint-up(md){
 			top: rem(172);
 		}
-		@include media-breakpoint-up(sm){
-			top: rem(135);
+		@include media-breakpoint-up(md){
+			top: rem(88);
 		}
 
 		transform: translateY(-50%);

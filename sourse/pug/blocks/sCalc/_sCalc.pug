@@ -30,31 +30,31 @@ mixin sCalc(data)
 				+item(`Куда выбираете окна?`,`1`).active
 				
 					.row
-						+e.col.col-lg-3
+						+e.col.col-md-3
 							+radio-block(`step-1-1`,`В квартиру`,`step-1`)
-						+e.col.col-lg-3
+						+e.col.col-md-3
 							+radio-block(`step-1-2`,`В частный дом`,`step-1`)
-						+e.col.col-lg-3
+						+e.col.col-md-3
 							+radio-block(`step-1-3`,`В офис`,`step-1`)
 				+item(`Сколько нужно конструкций (окон, дверей)?`,`2`)
 					.row
-						+e.col.col-lg-3
+						+e.col.col-md-3
 							+radio-block(`step-2-1`,`1 шт.`,`step-2`)
 								+e.SPAN.count 1
-						+e.col.col-lg-3
+						+e.col.col-md-3
 							+radio-block(`step-2-1`,`2 шт.`,`step-2`)
 								+e.SPAN.count 2
-						+e.col.col-lg-3
+						+e.col.col-md-3
 							+radio-block(`step-2-1`,`3 шт.`,`step-2`)
 								+e.SPAN.count 3
-						+e.col.col-lg-3
+						+e.col.col-md-3
 							+radio-block(`step-2-1`,`4 шт.`,`step-2`)
 								+e.SPAN.count 4
 				+item(`Вам нужны только конструкции или ещё дополнительные услуги?`,`3`)
 					.row
-						+e.col.col-lg-3
+						+e.col.col-md-3
 							+radio-block(`step-2-1`,`Только конструкции<br> (без установки)`,`step-3`) 
-						+e.col.col-lg-3
+						+e.col.col-md-3
 							+radio-block(`step-3-2`,`Конструкции + монтажные услуги`,`step-3`) 
 
 				+item(`Выберите монтажные услуги`,`4`)

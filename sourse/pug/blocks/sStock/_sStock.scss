@@ -101,7 +101,17 @@
 
 .timer-block{
 	display: flex;
-	margin-top: rem(62);
+		@include media-breakpoint-up(xxl) {
+
+			margin-top: rem(62);
+		}
+		
+		@include media-breakpoint-up(lg) {
+
+			// margin-top: rem(62);
+		}
+		margin-top: rem(32);
+
 	@include media-breakpoint-down(lg){
 		margin-top: rem(32);
 		justify-content: center;

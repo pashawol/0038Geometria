@@ -45,6 +45,15 @@
 		}
 	}
 	&__col{
+		@include media-breakpoint-up(xl){
+			max-width: (100% * 3 / 12);
+		}
+		@include media-breakpoint-up(lg){
+			max-width: (100% * 4 / 12);
+		}
+		@include media-breakpoint-only(md){
+			max-width: 50%;
+		}
 			@include media-breakpoint-up(md) {
 				margin-bottom: rem(60);
 			}

@@ -23,17 +23,17 @@
 			@include media-breakpoint-up(xl) {
 				min-height: rem(520); 
 			}
-		}
-		&__step-item{
-			&:not(.active){
-				display: none;
-			}
 			@include media-breakpoint-up(xl) {
 				
 				background-image: url(../img/@2x/calc-bg-left.png),
 				url(../img/@2x/calc-bg-right.png);
 				background-position: left bottom, right bottom;
 				background-repeat: no-repeat;
+			}
+		}
+		&__step-item{
+			&:not(.active){
+				display: none;
 			}
 		@include media-breakpoint-up(xxl) {
 			
@@ -42,9 +42,10 @@
 		}
 		@include media-breakpoint-up(xl) {
 			min-height: rem(520);
-
+			
+			padding: rem(40) rem(40);
 		}
-		padding: rem(40) rem(40);
+		padding: rem(40) rem(30);
 
 
 	}
@@ -63,7 +64,10 @@
 	}
 
 	&__body{
+		@include media-breakpoint-up(xl) {
 		min-height: rem(280);
+	}
+	min-height: rem(200);
 		.row{
 			justify-content: center;
 		}
@@ -72,6 +76,7 @@
 		display: flex;
 		justify-content: center;
 		@include roww(20px, m);
+		padding-top: rem(30);
 	}
 	&__btn{
 		@extend .btn;
@@ -104,24 +109,25 @@
 
 .radio-block{
 	display: flex;
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(md) {
 
 		flex-direction: column;
 		text-align: center;
+		height: calc(100% - var(--sp-base));
 		justify-content: center;
+		margin-bottom: var(--sp-base);
 	}
+	margin-bottom: 10px;
 	align-items: center;
 	// display: block;
 	font-weight: bold;
-	height: calc(100% - var(--sp-base));
-	margin-bottom: var(--sp-base);
-	padding: rem(20);
 	@include media-breakpoint-up(xxl) {
-
+		
 		min-height: rem(265);
 		// padding-top: rem(50);
 	}
 	// padding-top: rem(30);
+	padding: rem(20);
 	@include media-breakpoint-up(xl) {
 		
 		min-height: rem(225);
@@ -129,6 +135,10 @@
 	@include media-breakpoint-up(lg) {
 		
 		min-height: rem(200);
+	}
+	@include media-breakpoint-up(md) {
+		
+		min-height: rem(150);
 	}
 	z-index: 2;
 	position: relative;
@@ -146,7 +156,7 @@
 	}
 	input{
 		cursor: pointer;
-		border: 1px solid #fff;
+		border: 2px solid #fff;
 		z-index: -1;
 		position: absolute;
 		background: #FFFFFF;
@@ -171,11 +181,15 @@
 		}
 	}
 	&__img-wrap{
-			@include media-breakpoint-up(lg){
+			@include media-breakpoint-up(xl){
 				margin-bottom: rem(30);
+
+			}
+			@include media-breakpoint-up(md){
+				margin-bottom: 20px;
 				margin-right: 0;
 			}
-			margin-right: 20px;
+			margin-right: 18px;
 		position: relative;
 		display: inline-block;
 	}
@@ -223,4 +237,8 @@
 		
 		border-color: #E5E5E5;
 	}
+}
+
+.custom-input{
+	cursor: pointer;
 }

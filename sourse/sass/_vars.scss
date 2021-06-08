@@ -153,7 +153,7 @@ $enable-reduced-motion: true !default;
 $enable-smooth-scroll: true !default;
 $enable-grid-classes: true !default;
 $enable-button-pointers: true !default;
-$enable-rfs: true !default;
+$enable-rfs: false !default;
 $enable-validation-icons: true !default;
 $enable-negative-margins: false !default;
 $enable-deprecation-messages: true !default;
@@ -263,6 +263,7 @@ $grid-breakpoints: (
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
+	xs: 538px,
 	sm: 540px,
 	md: 720px,
 	lg: 960px,

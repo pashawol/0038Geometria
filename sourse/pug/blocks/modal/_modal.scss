@@ -1,4 +1,9 @@
 .modal-win {
+	.fancybox-button{
+		height: 65px;
+		width: 65px;
+		opacity: 0.4;
+	}
 	.form-wrap{
 		&__title{
 			// text-align: left;

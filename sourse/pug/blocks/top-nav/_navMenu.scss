@@ -21,5 +21,8 @@
 		padding: rem(20) rem(10);
 		font-weight: bold;
 		color: $body-color;
+		&:hover{
+			color: $primary;
+		}
 	}
 }

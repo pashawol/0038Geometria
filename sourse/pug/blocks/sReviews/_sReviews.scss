@@ -23,8 +23,15 @@
 		&__body{
 			flex-grow: 1;
 		}
+		&__img-wrap{
+			@include media-breakpoint-down(lg) {
+				position: relative;
+			}
+			margin-right: rem(20);
+
+		}
 		.avatar{
-				@include media-breakpoint-up(lg) {
+				@include media-breakpoint-up(xxl) {
 					width: rem(80);
 					height: rem(80);
 				}
@@ -32,12 +39,21 @@
 				height: rem(60);
 				object-fit: cover;
 				border-radius: 50%;
-				margin-right: rem(20);
 		}
 		.soc-i{
 			position: absolute;
-			right: 0;
-			top: 0;
+			@include media-breakpoint-down(lg){
+				img{
+					max-width: 24px;
+				}
+			}
+			@include media-breakpoint-up(lg){
+				top: 0;
+				bottom: auto;
+				right: 0;
+			}
+			right: -10px;
+			bottom: 0;
 		}
 		&__title{
 			font-size: reM(20);
@@ -56,6 +72,14 @@
 
 		}
 
+		@include media-breakpoint-down(lg) {
+
+			.swiper-button-hand{
+				display: none;
+			}
+		}
+
+	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -2,15 +2,15 @@
 mixin mnu()
 	-
 		var nav= { 
-			"Акции":"#",
-			"Цены":"#",
-			"Характеристики":"#",
-			"Преимущества":"#" ,
-			"Выполненные работы":"#",
-			"Отзывы":"#",
-			"Этапы работ":"#",
-			"Новости":"#",
-			"Контакты":"#",
+			"Акции":"#sStock",
+			"Цены":"#sPrices",
+			"Характеристики":"#sCharacters",
+			"Преимущества":"#sAdvantages" ,
+			"Выполненные работы":"#sCases",
+			"Отзывы":"#sReviews",
+			"Этапы работ":"#sSteps",
+			"Новости":"#sBlog",
+			"Контакты":"#sContact",
 			}
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement") 
 		each linkPatch, linkName in nav

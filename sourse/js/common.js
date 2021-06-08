@@ -102,7 +102,7 @@ const JSCCommon = {
 		this.toggleMenu();
 		document.addEventListener('mouseup', (event) => {
 			let container = event.target.closest(".menu-mobile--js.active"); // (1)
-			let link = event.target.closest(".navMenu__link"); // (1)
+			let link = event.target.closest(".menu a"); // (1)
 			if (!container || link) this.closeMenu();
 		}, { passive: true });
 
@@ -155,11 +155,11 @@ const JSCCommon = {
 	},
 	animateScroll() {
 
-		$(document).on('click', " .top-nav li a, .scroll-link", function () {
+		$(document).on('click', " .menu li a, .scroll-link", function () {
 			const elementClick = $(this).attr("href");
 			const destination = $(elementClick).offset().top;
-
-			$('html, body').animate({ scrollTop: destination },  0);
+			 
+			$('html, body').animate({ scrollTop: destination - 80 },  0);
 
 			return false;
 		});
@@ -265,7 +265,7 @@ function eventHandler() {
 			spaceBetween: 20, 
 
 			breakpoints: {
-				992: {
+				768: {
 					slidesPerView: 2,
 				},
 				// when window width is >= 640px
@@ -372,6 +372,10 @@ function eventHandler() {
 		e.preventDefault(); 
 		$('html, body').animate({ scrollTop: 0 }, 0);
 	})
+
+	var Sticky = new hcSticky('.top-nav', {
+		stickTo: 'body'
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
