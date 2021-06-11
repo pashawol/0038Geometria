@@ -27,8 +27,8 @@ html(lang="ru")
 		meta(name="viewport" content="width=570,   maximum-scale=1 , user-scalable=no")
 		script.
 			let viewport = document.querySelector("meta[name=viewport]");
-			var userAgent = navigator.userAgent.toLowerCase();
-			if (/safari/.test(userAgent)) {
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
 				window.addEventListener('resize', () => { 
 					this.innerWidth > 570 
 						? viewport.content = "width=device-width,  maximum-scale=1.0, user-scalable=0" 
