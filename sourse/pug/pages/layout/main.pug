@@ -29,12 +29,12 @@ html(lang="ru")
 			let viewport = document.querySelector("meta[name=viewport]");
 			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 			if (is_safari) {
-				alert(navigator.userAgent);
+				//- alert(navigator.userAgent);
 				function w() {
 					this.outerWidth > 570 
 						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
 						:  viewport.content = "width=570,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
-					alert(this.outerWidth + ', '+  viewport.content);
+					//- alert(this.outerWidth + ', '+  viewport.content);
 				}
 				 w();
 				window.addEventListener('resize', () => { 
