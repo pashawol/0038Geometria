@@ -13,17 +13,17 @@ padding-top: rem(20);
 		position: relative;
 		border-radius: 15px;
 		overflow: hidden;
-		background: #DFD3C3;
+		background: var(--color-bg);
 		z-index: 2;
 		&::after {
 			content: '';
 			position: absolute;
-			width: 60%;
+			width: 70%;
 			height: 100%;
 			left: 30%;
 			top: 0;
 			z-index: -1;
-			background: linear-gradient(90deg, #DFD3C3 15%, rgba(223, 211, 195, 0) 25%);
+			background: linear-gradient(90deg, var(--color-bg) 15%, rgba(225, 225, 225, 0) 25%);
 		}
 		img{
 			object-fit: cover;

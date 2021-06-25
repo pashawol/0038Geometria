@@ -3,7 +3,7 @@ mixin headerBlock()
 	+b.headerBlock#headerBlock&attributes(attributes)
 		+slider()
 			- for (var x = 0; x < 3; x++)
-				+e.slide.swiper-slide.bg-wrap
+				+e.slide.swiper-slide.bg-wrap(style="--color-bg:#DFD3C3")
 					//- +pic("head-img.jpg",'bg').picture-bg
 					+e.img-wrap
 						img.swiper-lazy(src="#" data-src="img/@2x/head-img.jpg", alt="")
